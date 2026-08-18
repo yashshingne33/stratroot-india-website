@@ -1,0 +1,422 @@
+You are a Senior Product Designer, Creative Director, UX Architect, and Frontend Design Engineer with over 20 years of experience designing premium enterprise websites for companies like McKinsey, BCG, Stripe, Notion, Linear, Deloitte, Accenture, and Apple.
+
+Your task is NOT to generate a generic consulting website.
+
+You are designing the complete visual identity of StratRoot India.
+
+This website must feel like it belongs to a premium execution-focused business consulting company serving CEOs, Managing Directors, founders, manufacturers, exporters and business owners.
+
+This design will be evaluated by the Managing Director of StratRoot India.
+
+Think like a Creative Director at Pentagram or Instrument.
+
+====================================================
+
+OBJECTIVE
+
+Design an award-worthy premium website.
+
+The website should immediately communicate:
+
+"We don't just advise.
+
+We execute."
+
+Visitors should immediately trust the company.
+
+The design should feel timeless instead of trendy.
+
+====================================================
+
+VERY IMPORTANT
+
+This must NOT look like
+
+❌ AI generated
+❌ Startup landing page
+❌ SaaS dashboard
+❌ Digital marketing agency
+❌ Generic consulting template
+❌ Bootstrap website
+❌ Themeforest template
+❌ Corporate blue website
+❌ Freelancer portfolio
+
+Instead it should feel like
+
+✓ Premium
+✓ Editorial
+✓ Sophisticated
+✓ Intelligent
+✓ Serious
+✓ Structured
+✓ Trustworthy
+✓ Quiet confidence
+✓ Executive
+✓ Modern
+✓ International
+
+====================================================
+
+DESIGN INSPIRATION
+
+Take inspiration ONLY from
+
+McKinsey
+BCG
+Stripe
+Apple
+Notion
+Linear
+Raycast
+IBM
+Aesop
+Porsche
+Intercom
+
+But DO NOT COPY any website.
+
+Create an original design.
+
+====================================================
+
+VISUAL STYLE
+
+Large typography
+
+Large whitespace
+
+Structured grids
+
+Beautiful spacing
+
+Editorial typography
+
+Minimal colours
+
+Subtle animation
+
+Excellent visual hierarchy
+
+Elegant icons
+
+Custom diagrams
+
+Business process illustrations
+
+High-end photography
+
+NO stock handshake images
+
+NO random office people
+
+NO fake boardroom photos
+
+NO glassmorphism
+
+NO neon gradients
+
+NO over-rounded cards
+
+NO floating blobs
+
+NO flashy animations
+
+====================================================
+
+COLOUR PALETTE
+
+Primary
+
+#111827
+
+Secondary
+
+#1F2937
+
+Background
+
+#F8FAFC
+
+Accent
+
+Muted Copper (#B7791F)
+
+Success
+
+#0F766E
+
+Text
+
+#111827
+
+====================================================
+
+TYPOGRAPHY
+
+Headings
+
+Playfair Display
+OR
+Cormorant Garamond
+
+Body
+
+Inter
+Geist
+or IBM Plex Sans
+
+Large headlines
+
+80-96px
+
+Section headings
+
+40-56px
+
+Perfect typography rhythm.
+
+====================================================
+
+ICON STYLE
+
+Lucide Icons
+
+Thin line icons
+
+Simple
+
+Elegant
+
+Consistent
+
+====================================================
+
+IMAGES
+
+Industrial
+
+Factories
+
+Exports
+
+Containers
+
+Business meetings
+
+Manufacturing
+
+Dashboards
+
+Operations
+
+Indian businesses
+
+NO AI faces
+
+NO fake smiling people
+
+====================================================
+
+WEBSITE STRUCTURE
+
+Create ALL required pages from the assignment:
+
+Home
+
+About
+
+Services Overview
+
+Individual Service
+
+Industries
+
+Case Studies
+
+Case Study Detail
+
+Insights
+
+Article Detail
+
+Contact
+
+Consultation Booking
+
+404
+
+Privacy
+
+====================================================
+
+HOMEPAGE STRUCTURE
+
+Hero
+
+Business Problems
+
+Why StratRoot
+
+Services
+
+Execution Framework
+
+Industries
+
+Case Studies
+
+Insights
+
+Testimonials Placeholder
+
+FAQ
+
+Consultation CTA
+
+Footer
+
+====================================================
+
+DESIGN SYSTEM
+
+Create
+
+Buttons
+
+Inputs
+
+Cards
+
+Tables
+
+Process timelines
+
+Statistics
+
+Feature cards
+
+Timeline
+
+Accordion
+
+Mega menu
+
+Navigation
+
+Footer
+
+Modals
+
+Forms
+
+Badges
+
+Icons
+
+Spacing system
+
+8-point grid
+
+====================================================
+
+MOBILE
+
+Design mobile first.
+
+Perfect responsive layout.
+
+====================================================
+
+TECH
+
+Build using
+
+Next.js 15
+
+TypeScript
+
+TailwindCSS
+
+Shadcn
+
+Framer Motion (very subtle)
+
+Lucide
+
+====================================================
+
+OUTPUT REQUIRED
+
+Generate a COMPLETE production-ready Next.js project.
+
+Include:
+
+package.json
+
+next.config
+
+tailwind.config
+
+tsconfig
+
+public assets
+
+components
+
+app router
+
+responsive layout
+
+animations
+
+typography
+
+placeholder images
+
+icons
+
+SEO metadata
+
+OpenGraph
+
+robots
+
+sitemap
+
+404
+
+loading
+
+error
+
+Header
+
+Footer
+
+All pages
+
+Reusable components
+
+Beautiful spacing
+
+Perfect folder structure
+
+====================================================
+
+DELIVERABLE
+
+Return the COMPLETE project as if preparing it for a client handover.
+
+Generate EVERY file.
+
+Do NOT omit files.
+
+Output a downloadable ZIP-ready project with no placeholders such as "continue here" or "implement later."
+
+The project should run immediately after:
+
+npm install
+npm run dev
+
+The final quality should be portfolio-level and comparable to websites produced by top international design agencies.
