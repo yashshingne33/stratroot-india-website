@@ -1,34 +1,41 @@
 import { useState } from 'react'
-import { MapPin, Mail, Phone, Clock, Send } from 'lucide-react'
+// import { MapPin, Mail, Phone, Clock, Send, Linkedin } from 'lucide-react'
+import { MapPin, Mail, Phone, Clock, Send, Share2 } from 'lucide-react'
 
-const OFFICES = [
-  {
-    city: 'Mumbai',
-    type: 'Head Office',
-    address: 'Level 8, One BKC, Bandra Kurla Complex, Mumbai 400051',
-    phone: '+91 22 4009 0000',
-  },
-  {
-    city: 'Delhi NCR',
-    type: 'Office',
-    address: 'Suite 410, DLF Centre, Sansad Marg, New Delhi 110001',
-    phone: '+91 11 4200 0000',
-  },
-  {
-    city: 'Bengaluru',
-    type: 'Office',
-    address: 'WeWork Galaxy, 43, Residency Road, Bengaluru 560025',
-    phone: '+91 80 4700 0000',
-  },
+const SERVICES = [
+  'Export Market Development',
+  'Sales & Channel Development',
+  'Business Strategy & Commercial Advisory',
+  'Operations & Execution Systems',
+  'Market-Ready Business Communication',
+  'Custom Strategic Engagement',
 ]
+
+const INDUSTRIES = [
+  'Agriculture, Food Processing & FPOs',
+  'Manufacturing & Industrial Products',
+  'Exporters & Trading Businesses',
+  'Consumer & Educational Products',
+  'Infrastructure & Project Supplies',
+  'Other',
+]
+
+const CONTACT_METHODS = ['Email', 'Phone', 'WhatsApp']
 
 export default function Contact() {
   const [form, setForm] = useState({
-    name: '',
+    fullName: '',
+    companyName: '',
+    designation: '',
     email: '',
-    company: '',
-    revenue: '',
-    message: '',
+    phone: '',
+    website: '',
+    industry: '',
+    service: '',
+    market: '',
+    description: '',
+    preferredContact: '',
+    consent: false,
   })
   const [submitted, setSubmitted] = useState(false)
 
@@ -39,214 +46,309 @@ export default function Contact() {
 
   return (
     <div>
-      {/* Header */}
-      <div className="pt-36 pb-20 lg:pt-48 lg:pb-28" style={{ background: '#102A43' }}>
+      {/* ── Header ── */}
+      <section className="pt-36 pb-20 lg:pt-48 lg:pb-28" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
-            <span className="h-px w-12" style={{ background: '#C6A15B' }} />
-            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#C6A15B' }}>Contact</span>
+            <span className="h-px w-12" style={{ background: 'var(--color-gold)' }} />
+            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-gold)' }}>
+              Contact
+            </span>
           </div>
           <h1
             className="font-display text-5xl lg:text-7xl font-semibold text-white max-w-2xl"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
-            Let's have a
+            Let's Discuss the
             <br />
-            <em style={{ color: '#C6A15B' }}>conversation.</em>
+            <em style={{ color: 'var(--color-gold)', fontStyle: 'normal' }}>Opportunity.</em>
           </h1>
-          <p className="mt-8 text-lg max-w-xl" style={{ color: '#BAC7D5' }}>
-            No sales pitch. If we're not the right fit, we'll tell you. If we are, we'll show you exactly how.
+          <p className="mt-8 text-lg max-w-xl" style={{ color: 'var(--color-muted)' }}>
+            Tell us about your business, current challenge and the outcome you are seeking. We
+            will review the requirement and determine whether StratRoot is the right partner for
+            the assignment.
           </p>
         </div>
-      </div>
+      </section>
 
-      <section className="py-24 lg:py-32" style={{ background: '#F8FAF7' }}>
+      <section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            {/* Contact details */}
+            {/* ── Contact details ── */}
             <div className="lg:col-span-4">
               <div className="space-y-8 mb-12">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
-                    <Mail size={16} style={{ color: '#2F855A' }} />
-                    <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#627D98' }}>Email</p>
+                    <Mail size={16} style={{ color: 'var(--color-accent)' }} />
+                    <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-muted)' }}>
+                      Email
+                    </p>
                   </div>
-                  <a
-                    href="mailto:hello@stratroot.in"
-                    className="text-base font-medium hover:text-[#2F855A] transition-colors"
-                    style={{ color: '#102A43' }}
-                  >
-                    hello@stratroot.in
-                  </a>
-                </div>
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <Phone size={16} style={{ color: '#2F855A' }} />
-                    <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#627D98' }}>Phone</p>
-                  </div>
-                  <a
-                    href="tel:+919999999999"
-                    className="text-base font-medium hover:text-[#2F855A] transition-colors"
-                    style={{ color: '#102A43' }}
-                  >
-                    +91 99999 99999
-                  </a>
-                </div>
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <Clock size={16} style={{ color: '#2F855A' }} />
-                    <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#627D98' }}>Response Time</p>
-                  </div>
-                  <p className="text-base font-medium" style={{ color: '#102A43' }}>
-                    Within one business day
+                  <p className="text-base font-medium" style={{ color: 'var(--color-primary)' }}>
+                    [Official business email]
                   </p>
                 </div>
-              </div>
-
-              {/* Offices */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <MapPin size={16} style={{ color: '#2F855A' }} />
-                  <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#627D98' }}>Our Offices</p>
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <Phone size={16} style={{ color: 'var(--color-accent)' }} />
+                    <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-muted)' }}>
+                      Phone / WhatsApp
+                    </p>
+                  </div>
+                  <p className="text-base font-medium" style={{ color: 'var(--color-primary)' }}>
+                    [Official number]
+                  </p>
                 </div>
-                <div className="space-y-6">
-                  {OFFICES.map((office) => (
-                    <div key={office.city}>
-                      <div className="flex items-center gap-2 mb-1">
-                        <p className="font-semibold text-sm" style={{ color: '#102A43' }}>{office.city}</p>
-                        <span
-                          className="text-xs px-1.5 py-0.5 rounded font-medium"
-                          style={{ background: '#2F855A15', color: '#2F855A' }}
-                        >
-                          {office.type}
-                        </span>
-                      </div>
-                      <p className="text-xs leading-relaxed" style={{ color: '#627D98' }}>{office.address}</p>
-                      <p className="text-xs mt-1" style={{ color: '#627D98' }}>{office.phone}</p>
-                    </div>
-                  ))}
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <MapPin size={16} style={{ color: 'var(--color-accent)' }} />
+                    <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-muted)' }}>
+                      Office
+                    </p>
+                  </div>
+                  <p className="text-sm leading-relaxed" style={{ color: 'var(--color-charcoal)' }}>
+                    Nagpur, Maharashtra, India
+                    <br />
+                    <span style={{ color: 'var(--color-muted)' }}>[Confirmed address pending]</span>
+                  </p>
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <Share2 size={16} style={{ color: 'var(--color-accent)' }} />
+                    <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-muted)' }}>
+                      LinkedIn
+                    </p>
+                  </div>
+                  <p className="text-base font-medium" style={{ color: 'var(--color-primary)' }}>
+                    [Official LinkedIn page]
+                  </p>
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <Clock size={16} style={{ color: 'var(--color-accent)' }} />
+                    <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-muted)' }}>
+                      Business Hours
+                    </p>
+                  </div>
+                  <p className="text-base font-medium" style={{ color: 'var(--color-primary)' }}>
+                    Monday to Saturday, 10:00 AM – 6:30 PM IST
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Form */}
+            {/* ── Form ── */}
             <div className="lg:col-span-8">
               {submitted ? (
-                <div
-                  className="p-12 border border-[#BAC7D5]/40 rounded-lg bg-white text-center shadow-sm"
-                >
+                <div className="p-12 border rounded-lg bg-white text-center shadow-sm" style={{ borderColor: 'var(--color-border)' }}>
                   <div
                     className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
-                    style={{ background: '#2F855A15' }}
+                    style={{ background: 'rgba(28,55,42,0.08)' }}
                   >
-                    <Send size={22} style={{ color: '#2F855A' }} />
+                    <Send size={22} style={{ color: 'var(--color-accent)' }} />
                   </div>
-                  <h2 className="font-display text-2xl font-semibold mb-3" style={{ color: '#102A43' }}>
-                    Message received.
+                  <h2 className="font-display text-2xl font-semibold mb-3" style={{ color: 'var(--color-primary)' }}>
+                    Requirement received.
                   </h2>
-                  <p className="text-sm" style={{ color: '#627D98' }}>
-                    We'll review your message and respond within one business day.
+                  <p className="text-sm" style={{ color: 'var(--color-muted)' }}>
+                    We will review the requirement and get back to you.
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="p-8 lg:p-10 border border-[#BAC7D5]/40 rounded-lg bg-white shadow-sm">
-                  <h2 className="font-display text-2xl font-semibold mb-8" style={{ color: '#102A43' }}>
-                    Send us a message
+                <form
+                  onSubmit={handleSubmit}
+                  className="p-8 lg:p-10 border rounded-lg bg-white shadow-sm"
+                  style={{ borderColor: 'var(--color-border)' }}
+                >
+                  <h2 className="font-display text-2xl font-semibold mb-8" style={{ color: 'var(--color-primary)' }}>
+                    Submit Your Requirement
                   </h2>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-                    <div>
-                      <label className="block text-xs font-semibold mb-2 uppercase tracking-widest" style={{ color: '#627D98' }}>
-                        Full Name *
-                      </label>
+                    <Field label="Full Name" required>
                       <input
                         type="text"
                         required
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full px-4 py-3 border border-[#BAC7D5]/40 rounded text-sm focus:outline-none focus:border-[#2F855A] transition-colors"
+                        value={form.fullName}
+                        onChange={(e) => setForm({ ...form, fullName: e.target.value })}
+                        className="w-full px-4 py-3 border rounded text-sm focus:outline-none transition-colors"
+                        style={{ borderColor: 'var(--color-border)' }}
                         placeholder="Your name"
                       />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold mb-2 uppercase tracking-widest" style={{ color: '#627D98' }}>
-                        Email *
-                      </label>
+                    </Field>
+                    <Field label="Company Name" required>
+                      <input
+                        type="text"
+                        required
+                        value={form.companyName}
+                        onChange={(e) => setForm({ ...form, companyName: e.target.value })}
+                        className="w-full px-4 py-3 border rounded text-sm focus:outline-none transition-colors"
+                        style={{ borderColor: 'var(--color-border)' }}
+                        placeholder="Your company"
+                      />
+                    </Field>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                    <Field label="Designation">
+                      <input
+                        type="text"
+                        value={form.designation}
+                        onChange={(e) => setForm({ ...form, designation: e.target.value })}
+                        className="w-full px-4 py-3 border rounded text-sm focus:outline-none transition-colors"
+                        style={{ borderColor: 'var(--color-border)' }}
+                        placeholder="Your role"
+                      />
+                    </Field>
+                    <Field label="Email Address" required>
                       <input
                         type="email"
                         required
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full px-4 py-3 border border-[#BAC7D5]/40 rounded text-sm focus:outline-none focus:border-[#2F855A] transition-colors"
+                        className="w-full px-4 py-3 border rounded text-sm focus:outline-none transition-colors"
+                        style={{ borderColor: 'var(--color-border)' }}
                         placeholder="your@email.com"
                       />
-                    </div>
+                    </Field>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-                    <div>
-                      <label className="block text-xs font-semibold mb-2 uppercase tracking-widest" style={{ color: '#627D98' }}>
-                        Company
-                      </label>
+                    <Field label="Phone / WhatsApp Number" required>
+                      <input
+                        type="tel"
+                        required
+                        value={form.phone}
+                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                        className="w-full px-4 py-3 border rounded text-sm focus:outline-none transition-colors"
+                        style={{ borderColor: 'var(--color-border)' }}
+                        placeholder="+91 XXXXX XXXXX"
+                      />
+                    </Field>
+                    <Field label="Company Website">
                       <input
                         type="text"
-                        value={form.company}
-                        onChange={(e) => setForm({ ...form, company: e.target.value })}
-                        className="w-full px-4 py-3 border border-[#BAC7D5]/40 rounded text-sm focus:outline-none focus:border-[#2F855A] transition-colors"
-                        placeholder="Your company"
+                        value={form.website}
+                        onChange={(e) => setForm({ ...form, website: e.target.value })}
+                        className="w-full px-4 py-3 border rounded text-sm focus:outline-none transition-colors"
+                        style={{ borderColor: 'var(--color-border)' }}
+                        placeholder="www.yourcompany.com"
                       />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold mb-2 uppercase tracking-widest" style={{ color: '#627D98' }}>
-                        Annual Revenue
-                      </label>
+                    </Field>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                    <Field label="Industry">
                       <select
-                        value={form.revenue}
-                        onChange={(e) => setForm({ ...form, revenue: e.target.value })}
-                        className="w-full px-4 py-3 border border-[#BAC7D5]/40 rounded text-sm focus:outline-none focus:border-[#2F855A] transition-colors bg-white"
-                        style={{ color: form.revenue ? '#102A43' : '#9CA3AF' }}
+                        value={form.industry}
+                        onChange={(e) => setForm({ ...form, industry: e.target.value })}
+                        className="w-full px-4 py-3 border rounded text-sm bg-white focus:outline-none transition-colors"
+                        style={{ borderColor: 'var(--color-border)', color: form.industry ? 'var(--color-charcoal)' : '#9CA3AF' }}
                       >
-                        <option value="" disabled>Select range</option>
-                        <option value="<10">Under ₹10 Crore</option>
-                        <option value="10-50">₹10 – ₹50 Crore</option>
-                        <option value="50-200">₹50 – ₹200 Crore</option>
-                        <option value="200-500">₹200 – ₹500 Crore</option>
-                        <option value=">500">Above ₹500 Crore</option>
+                        <option value="">Select industry</option>
+                        {INDUSTRIES.map((i) => (
+                          <option key={i} value={i}>{i}</option>
+                        ))}
                       </select>
-                    </div>
+                    </Field>
+                    <Field label="Service Required">
+                      <select
+                        value={form.service}
+                        onChange={(e) => setForm({ ...form, service: e.target.value })}
+                        className="w-full px-4 py-3 border rounded text-sm bg-white focus:outline-none transition-colors"
+                        style={{ borderColor: 'var(--color-border)', color: form.service ? 'var(--color-charcoal)' : '#9CA3AF' }}
+                      >
+                        <option value="">Select service</option>
+                        {SERVICES.map((s) => (
+                          <option key={s} value={s}>{s}</option>
+                        ))}
+                      </select>
+                    </Field>
+                  </div>
+
+                  <div className="mb-5">
+                    <Field label="Target Market or Geography">
+                      <input
+                        type="text"
+                        value={form.market}
+                        onChange={(e) => setForm({ ...form, market: e.target.value })}
+                        className="w-full px-4 py-3 border rounded text-sm focus:outline-none transition-colors"
+                        style={{ borderColor: 'var(--color-border)' }}
+                        placeholder="e.g. Domestic, Middle East, Europe"
+                      />
+                    </Field>
+                  </div>
+
+                  <div className="mb-5">
+                    <Field label="Brief Description of Requirement" required>
+                      <textarea
+                        required
+                        value={form.description}
+                        onChange={(e) => setForm({ ...form, description: e.target.value })}
+                        rows={5}
+                        className="w-full px-4 py-3 border rounded text-sm focus:outline-none transition-colors resize-none"
+                        style={{ borderColor: 'var(--color-border)' }}
+                        placeholder="Tell us briefly about your business and the challenge you're facing..."
+                      />
+                    </Field>
                   </div>
 
                   <div className="mb-6">
-                    <label className="block text-xs font-semibold mb-2 uppercase tracking-widest" style={{ color: '#627D98' }}>
-                      What would you like to discuss? *
-                    </label>
-                    <textarea
+                    <Field label="Preferred Method of Contact">
+                      <select
+                        value={form.preferredContact}
+                        onChange={(e) => setForm({ ...form, preferredContact: e.target.value })}
+                        className="w-full px-4 py-3 border rounded text-sm bg-white focus:outline-none transition-colors"
+                        style={{ borderColor: 'var(--color-border)', color: form.preferredContact ? 'var(--color-charcoal)' : '#9CA3AF' }}
+                      >
+                        <option value="">Select preference</option>
+                        {CONTACT_METHODS.map((m) => (
+                          <option key={m} value={m}>{m}</option>
+                        ))}
+                      </select>
+                    </Field>
+                  </div>
+
+                  <div className="mb-6 flex items-start gap-3">
+                    <input
+                      type="checkbox"
                       required
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      rows={5}
-                      className="w-full px-4 py-3 border border-[#BAC7D5]/40 rounded text-sm focus:outline-none focus:border-[#2F855A] transition-colors resize-none"
-                      placeholder="Tell us briefly about your business and the challenge you're facing..."
+                      id="consent"
+                      checked={form.consent}
+                      onChange={(e) => setForm({ ...form, consent: e.target.checked })}
+                      className="mt-1"
                     />
+                    <label htmlFor="consent" className="text-xs leading-relaxed" style={{ color: 'var(--color-muted)' }}>
+                      I consent to StratRoot India using the information provided to respond to
+                      this enquiry.
+                    </label>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold text-white rounded transition-colors hover:bg-[#276749] cursor-pointer"
-                    style={{ background: '#2F855A' }}
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold text-white rounded transition-colors cursor-pointer"
+                    style={{ background: 'var(--color-accent)' }}
                   >
-                    Send Message
+                    Submit Your Requirement
                     <Send size={15} />
                   </button>
-                  <p className="text-xs text-center mt-4" style={{ color: '#627D98' }}>
-                    We respond within one business day. All enquiries are strictly confidential.
-                  </p>
                 </form>
               )}
             </div>
           </div>
         </div>
       </section>
+    </div>
+  )
+}
+
+function Field({ label, required, children }: { label: string; required?: boolean; children: React.ReactNode }) {
+  return (
+    <div>
+      <label className="block text-xs font-semibold mb-2 uppercase tracking-widest" style={{ color: 'var(--color-muted)' }}>
+        {label} {required && '*'}
+      </label>
+      {children}
     </div>
   )
 }

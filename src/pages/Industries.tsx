@@ -3,112 +3,80 @@ import { ArrowRight } from 'lucide-react'
 
 const INDUSTRIES = [
   {
-    label: 'Manufacturing',
-    engagements: 32,
+    label: 'Agriculture, Food Processing & FPOs',
+    img: 'photo-1500937386664-56d1dfef3854',
+    desc: 'Support with export readiness, product positioning, buyer communication, target-market research and channel development.',
+    services: ['Export Market Development', 'Market-Ready Business Communication'],
+  },
+  {
+    label: 'Manufacturing & Industrial Products',
     img: 'photo-1581091226825-a6a2a5aee158',
-    desc: 'From small-batch precision manufacturers to large-scale process industries — we\'ve restructured, optimised, and scaled manufacturing businesses across India.',
-    services: ['Operations Excellence', 'Business Restructuring', 'Supply Chain Optimisation'],
-    challenge: 'Indian manufacturing businesses face margin compression, labour complexity, and the urgent need to modernise without disrupting output.',
-    stats: [{ n: '₹800 Cr+', l: 'Revenue impact' }, { n: '22%', l: 'Avg cost reduction' }, { n: '32', l: 'Engagements' }],
+    desc: 'Opportunity assessment, commercial presentation, customer and distributor identification and structured sales pipelines.',
+    services: ['Business Strategy & Commercial Advisory', 'Sales & Channel Development'],
   },
   {
-    label: 'Exports & Trade',
-    engagements: 18,
+    label: 'Exporters & Trading Businesses',
     img: 'photo-1586528116311-ad8dd3c8310d',
-    desc: 'Helping Indian exporters navigate global markets, compliance complexity, and buyer development to break the ₹50 crore ceiling.',
-    services: ['Export & Trade Consulting', 'Market Entry', 'Financial Strategy'],
-    challenge: 'Most Indian exporters plateau at ₹40–50 Crore. The systems, buyer relationships, and financial infrastructure required to scale are absent.',
-    stats: [{ n: '₹600 Cr+', l: 'Export revenue generated' }, { n: '3.2×', l: 'Avg growth' }, { n: '18', l: 'Engagements' }],
+    desc: 'Product-market assessment, buyer identification, export communication, commercial processes and international business-development systems.',
+    services: ['Export Market Development', 'Operations & Execution Systems'],
   },
   {
-    label: 'Engineering & Infrastructure',
-    engagements: 14,
-    img: 'photo-1565043589221-2e58a0f43d8b',
-    desc: 'Project-based businesses, EPC contractors, and precision engineering companies require a different operating model — one that manages complexity and cash.',
-    services: ['Financial Strategy', 'Operations Excellence', 'HR & Org Design'],
-    challenge: 'Engineering businesses are complex, project-driven, and chronically cash-strained. Most lack the financial and operational systems to scale beyond ₹100 Crore.',
-    stats: [{ n: '₹450 Cr+', l: 'Revenue impact' }, { n: '14', l: 'Engagements' }, { n: '35%', l: 'WC improvement' }],
+    label: 'Consumer & Educational Products',
+    img: 'photo-1497633762265-9d179a990aa6',
+    desc: 'Retail-channel development, institutional outreach, school and distributor strategies, positioning and sales execution.',
+    services: ['Sales & Channel Development', 'Business Strategy & Commercial Advisory'],
   },
   {
-    label: 'Consumer Goods',
-    engagements: 9,
-    img: 'photo-1560472354-b33ff0c44a43',
-    desc: 'FMCG, food processing, and branded consumer businesses require strong distribution, brand management, and operational efficiency.',
-    services: ['Market Entry', 'Operations Excellence', 'Digital Transformation'],
-    challenge: 'Consumer goods businesses face intense competition, short product cycles, and distribution complexity. Scale requires systems — not just sales.',
-    stats: [{ n: '₹200 Cr+', l: 'Revenue impact' }, { n: '9', l: 'Engagements' }, { n: '2.8×', l: 'Avg growth' }],
-  },
-  {
-    label: 'Pharmaceuticals',
-    engagements: 6,
-    img: 'photo-1576091160550-2173dba999ef',
-    desc: 'Formulation manufacturers and API producers navigating compliance, export approvals, and quality systems require sector-specific expertise.',
-    services: ['Operations Excellence', 'Export & Trade', 'Supply Chain'],
-    challenge: 'Pharma businesses operate under intense regulatory scrutiny while needing to optimise cost and speed. Quality and compliance are non-negotiable.',
-    stats: [{ n: '₹180 Cr+', l: 'Revenue impact' }, { n: '6', l: 'Engagements' }, { n: '3 markets', l: 'Avg new exports' }],
-  },
-  {
-    label: 'Family-Owned Businesses',
-    engagements: 22,
-    img: 'photo-1507003211169-0a1dd7228f2d',
-    desc: 'India\'s backbone. Family businesses with 20–500 Crore in revenue face a unique set of succession, professionalisation, and governance challenges.',
-    services: ['Business Restructuring', 'HR & Org Design', 'Financial Strategy'],
-    challenge: 'Second and third-generation family businesses must professionalise without losing the founder spirit. Succession, sibling dynamics, and governance are critical.',
-    stats: [{ n: '₹700 Cr+', l: 'Revenue managed' }, { n: '22', l: 'Engagements' }, { n: '94%', l: 'Retention rate' }],
-  },
-  {
-    label: 'Logistics & Distribution',
-    engagements: 8,
-    img: 'photo-1586528116311-ad8dd3c8310d',
-    desc: 'From regional distributors to multi-state logistics operators — we build the operational infrastructure that makes scale possible.',
-    services: ['Supply Chain', 'Operations Excellence', 'Digital Transformation'],
-    challenge: 'Logistics margins are thin and competition is intense. Operational excellence is the only real competitive advantage.',
-    stats: [{ n: '₹250 Cr+', l: 'Revenue impact' }, { n: '8', l: 'Engagements' }, { n: '18%', l: 'Cost reduction' }],
-  },
-  {
-    label: 'MSMEs',
-    engagements: 30,
-    img: 'photo-1454165804606-c3d57bc86b40',
-    desc: 'India\'s 63 million MSMEs form the backbone of the economy. We work with MSME owners who are serious about growth and ready to build properly.',
-    services: ['Business Restructuring', 'Operations Excellence', 'Financial Strategy'],
-    challenge: 'MSMEs face capital constraints, talent scarcity, and operational informality. The leap from ₹10 to ₹50 crore is genuinely hard.',
-    stats: [{ n: '₹500 Cr+', l: 'Combined revenue' }, { n: '30', l: 'Engagements' }, { n: '₹1 Cr+', l: 'Avg EBITDA gain' }],
+    label: 'Infrastructure & Project Supplies',
+    img: 'photo-1541888946425-d81bb19240f5',
+    desc: 'Selected support for requirement analysis, vendor coordination, quantity and commercial planning, proposals and execution tracking.',
+    services: ['Operations & Execution Systems', 'Business Strategy & Commercial Advisory'],
   },
 ]
 
 export default function Industries() {
   return (
     <div>
-      <div className="pt-36 pb-20 lg:pt-48 lg:pb-28" style={{ background: '#102A43' }}>
+      {/* ── Page Header ── */}
+      <section className="pt-36 pb-20 lg:pt-48 lg:pb-28" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
-            <span className="h-px w-12" style={{ background: '#C6A15B' }} />
-            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#C6A15B' }}>Sectors We Serve</span>
+            <span className="h-px w-12" style={{ background: 'var(--color-gold)' }} />
+            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-gold)' }}>
+              Industries
+            </span>
           </div>
           <h1
             className="font-display text-5xl lg:text-7xl font-semibold text-white max-w-3xl"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
-            Sector depth.
+            Selected Sectors
             <br />
-            <em style={{ color: '#C6A15B' }}>Not generalism.</em>
+            <em style={{ color: 'var(--color-gold)', fontStyle: 'normal' }}>We Support.</em>
           </h1>
-          <p className="mt-8 text-lg max-w-xl" style={{ color: '#BAC7D5' }}>
-            We don't work across every industry. We go deep in the sectors we know, so our advice is grounded in operational reality — not theory.
+          <p className="mt-8 text-lg max-w-xl" style={{ color: 'var(--color-muted)' }}>
+            Every industry has different buyers, channels, operating requirements and
+            decision-making processes.
           </p>
         </div>
-      </div>
+      </section>
 
-      <section className="py-24 lg:py-32" style={{ background: '#F8FAF7' }}>
+      {/* ── Industries List ── */}
+      <section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="space-y-16">
             {INDUSTRIES.map((ind, i) => (
               <div
                 key={ind.label}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                  i % 2 === 1 ? 'lg:grid-flow-dense' : ''
+                }`}
               >
                 <div className={i % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="overflow-hidden rounded-lg" style={{ height: '360px', background: '#E2E8F0' }}>
+                  <div
+                    className="overflow-hidden rounded-lg"
+                    style={{ height: '360px', background: 'var(--color-border)' }}
+                  >
                     <img
                       src={`https://images.unsplash.com/${ind.img}?w=800&h=500&fit=crop&auto=format`}
                       alt={ind.label}
@@ -117,35 +85,28 @@ export default function Industries() {
                   </div>
                 </div>
                 <div className={i % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="h-px w-8" style={{ background: '#C6A15B' }} />
-                    <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#C6A15B' }}>
-                      {ind.engagements} engagements
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="h-px w-8" style={{ background: 'var(--color-gold)' }} />
+                    <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-gold)' }}>
+                      Sector
                     </span>
                   </div>
-                  <h2 className="font-display text-3xl lg:text-4xl font-semibold mb-4" style={{ color: '#1F2933' }}>
+                  <h2
+                    className="font-display text-3xl lg:text-4xl font-semibold mb-4"
+                    style={{ color: 'var(--color-charcoal)' }}
+                  >
                     {ind.label}
                   </h2>
-                  <p className="text-sm leading-relaxed mb-4" style={{ color: '#1F2933' }}>{ind.desc}</p>
-                  <p className="text-sm leading-relaxed mb-6 italic" style={{ color: '#2F855A' }}>
-                    The challenge: {ind.challenge}
+                  <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--color-muted)' }}>
+                    {ind.desc}
                   </p>
-
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    {ind.stats.map((s) => (
-                      <div key={s.l} className="p-4 border border-[#BAC7D5]/40 rounded-lg bg-white">
-                        <p className="font-display text-xl font-semibold" style={{ color: '#1F2933' }}>{s.n}</p>
-                        <p className="text-xs mt-0.5" style={{ color: '#1F2933' }}>{s.l}</p>
-                      </div>
-                    ))}
-                  </div>
 
                   <div className="flex flex-wrap gap-2">
                     {ind.services.map((s) => (
                       <span
                         key={s}
                         className="text-xs font-medium px-3 py-1.5 rounded border"
-                        style={{ borderColor: '#BAC7D5', color: '#1F2933', background: 'white' }}
+                        style={{ borderColor: 'var(--color-border)', color: 'var(--color-charcoal)', background: 'white' }}
                       >
                         {s}
                       </span>
@@ -155,23 +116,40 @@ export default function Industries() {
               </div>
             ))}
           </div>
+
+          {/* ── Selective Approach note ── */}
+          <div
+            className="mt-16 p-10 rounded-lg border text-center"
+            style={{ borderColor: 'var(--color-border)', background: 'var(--color-primary)' }}
+          >
+            <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
+              A Selective Approach
+            </p>
+            <p className="text-sm leading-relaxed max-w-2xl mx-auto" style={{ color: 'var(--color-muted)' }}>
+              We accept assignments where our capabilities can create meaningful commercial or
+              operational value. Each prospective engagement is assessed before the scope and
+              working model are finalised.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="py-20" style={{ background: '#102A43' }}>
+      {/* ── CTA ── */}
+      <section className="py-20" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-display text-3xl lg:text-4xl font-semibold text-white mb-6">
-            Don't see your sector?
+            Don't see your industry?
           </h2>
-          <p className="text-sm mb-8" style={{ color: '#BAC7D5' }}>
-            Get in touch. We assess each situation individually — and we're honest when we're not the right fit.
+          <p className="text-sm mb-8" style={{ color: 'var(--color-muted)' }}>
+            Get in touch. We assess each opportunity individually — and we're direct about
+            whether we're the right fit.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold text-white rounded transition-opacity hover:opacity-90"
-            style={{ background: '#2F855A' }}
+            className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold text-white rounded transition-transform hover:-translate-y-0.5"
+            style={{ background: 'var(--color-accent)' }}
           >
-            Talk to Us <ArrowRight size={16} />
+            Discuss Your Industry <ArrowRight size={16} />
           </Link>
         </div>
       </section>
