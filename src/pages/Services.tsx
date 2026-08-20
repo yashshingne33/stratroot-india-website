@@ -107,25 +107,26 @@ const SERVICES = [
 export default function Services() {
   return (
     <div>
-      {/* ── Page Header ── */}
-      <section className="pt-36 pb-20 lg:pt-48 lg:pb-28" style={{ background: 'var(--color-primary)' }}>
+
+      {/* ── Header ── */}
+      <section className="pt-36 pb-20 lg:pt-48 lg:pb-24" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
             <span className="h-px w-12" style={{ background: 'var(--color-gold)' }} />
             <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-gold)' }}>
-              What We Do
+               What We Do
             </span>
           </div>
           <h1
-            className="font-display text-5xl lg:text-7xl font-semibold text-white max-w-3xl"
+            className="font-display text-5xl lg:text-6xl font-semibold text-white max-w-3xl mb-6"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
             Consulting Designed to
             <br />
             <em style={{ color: 'var(--color-gold)', fontStyle: 'normal' }}>Move Businesses Forward.</em>
           </h1>
-          <p className="mt-8 text-lg max-w-xl" style={{ color: 'var(--color-muted)' }}>
-            Our services combine market understanding, commercial planning and structured
+          <p className="text-lg max-w-lg" style={{ color: 'var(--color-muted)' }}>
+             Our services combine market understanding, commercial planning and structured
             execution.
           </p>
         </div>
