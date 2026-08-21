@@ -34,7 +34,6 @@ export default function Contact() {
     service: '',
     market: '',
     description: '',
-    preferredContact: '',
     consent: false,
   })
   const [submitted, setSubmitted] = useState(false)
@@ -290,22 +289,6 @@ export default function Contact() {
                         style={{ borderColor: 'var(--color-border)' }}
                         placeholder="Tell us briefly about your business and the challenge you're facing..."
                       />
-                    </Field>
-                  </div>
-
-                  <div className="mb-6">
-                    <Field label="Preferred Method of Contact">
-                      <select
-                        value={form.preferredContact}
-                        onChange={(e) => setForm({ ...form, preferredContact: e.target.value })}
-                        className="w-full px-4 py-3 border rounded text-sm bg-white focus:outline-none transition-colors"
-                        style={{ borderColor: 'var(--color-border)', color: form.preferredContact ? 'var(--color-charcoal)' : '#9CA3AF' }}
-                      >
-                        <option value="">Select preference</option>
-                        {CONTACT_METHODS.map((m) => (
-                          <option key={m} value={m}>{m}</option>
-                        ))}
-                      </select>
                     </Field>
                   </div>
 
