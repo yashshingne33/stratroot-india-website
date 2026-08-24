@@ -2,7 +2,7 @@ import { Link } from 'react-router'
 import {
   ArrowRight, ArrowUpRight, CheckCircle, Target, Users, Globe,
   BarChart3, Settings, MessageSquare, Search, Activity,
-  ClipboardList, PlayCircle, RefreshCw,
+  ClipboardList, PlayCircle, RefreshCw, Quote,
 } from 'lucide-react'
 
 const CORE_CHALLENGES = [
@@ -473,7 +473,7 @@ export default function Home() {
       </section>
 
       {/* ── Founder's Note ── */}
-      <section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
+      {/* <section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--color-gold)' }}>
             A Direct Message From the Founder
@@ -496,7 +496,73 @@ export default function Home() {
             Founder & Principal Consultant, StratRoot India
           </p>
         </div>
-      </section>
+      </section> */}
+
+
+
+      {/* ── Founder's Note ── */}
+<section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+      {/* ── Left: identity ── */}
+      <div className="lg:col-span-4">
+        <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--color-gold)' }}>
+          A Direct Message From the Founder
+        </p>
+
+        {/* Placeholder for founder photograph — follows the same convention as the "Why StratRoot" section */}
+        <div
+          className="rounded-lg border aspect-[4/5] flex items-center justify-center mb-6"
+          style={{ borderColor: 'var(--color-border)', background: 'var(--color-sage, #A8B8A5)' }}
+        >
+          <p className="text-xs text-center px-8" style={{ color: 'var(--color-charcoal)' }}>
+            Founder photograph
+            <br />
+            (to be added)
+          </p>
+        </div>
+
+        <p className="font-semibold text-sm" style={{ color: 'var(--color-charcoal)' }}>
+          Saurabh Chalse
+        </p>
+        <p className="text-xs mt-1" style={{ color: 'var(--color-muted)' }}>
+          Founder & Principal Consultant, StratRoot India
+        </p>
+      </div>
+
+      {/* ── Right: the note ── */}
+      <div className="lg:col-span-8 lg:pt-2">
+        {/* echoes the numbered accent-circle badge used in "Our Approach" — ties the two sections together visually */}
+        <span
+          className="inline-flex items-center justify-center w-11 h-11 rounded-full mb-7"
+          style={{ background: 'var(--color-accent)' }}
+        >
+          <Quote size={18} className="text-white" strokeWidth={2.25} />
+        </span>
+
+        <p
+          className="font-display text-2xl lg:text-[1.85rem] leading-[1.55] mb-8"
+          style={{ color: 'var(--color-charcoal)' }}
+        >
+          At StratRoot, we believe businesses do not need more generic advice. They need clarity
+          on what to do next, structured execution and an accountable partner who understands
+          commercial realities. Our role is to connect strategy with action — whether that means
+          preparing a business for exports, entering a new market, developing a sales channel,
+          improving operating discipline or coordinating a complex opportunity.
+        </p>
+
+        <div className="flex items-center gap-4">
+          <span className="w-10 h-px" style={{ background: 'var(--color-gold)' }} />
+          <p className="text-xs font-medium tracking-wide" style={{ color: 'var(--color-muted)' }}>
+            Written personally by Saurabh Chalse, without a communications team in between.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* ── Final CTA ── */}
       <section className="py-24 lg:py-32" style={{ background: 'var(--color-primary)' }}>
