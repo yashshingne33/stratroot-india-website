@@ -117,6 +117,8 @@ const ENGAGEMENTS = [
     type: 'Project Supply Opportunity',
     desc: 'Quantity analysis, vendor coordination, commercial costing, proposal preparation and execution planning.',
   },
+
+  
 ]
 
 export default function Home() {
@@ -191,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* ── Core Challenges / Introduction ── */}
-      <section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mb-16">
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
@@ -237,7 +239,7 @@ export default function Home() {
       </section>
 
       {/* ── Services Overview ── */}
-      <section className="py-24 lg:py-32" style={{ background: 'var(--color-primary)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <div className="max-w-xl">
@@ -284,7 +286,7 @@ export default function Home() {
       </section>
 
       {/* ── Why StratRoot ── */}
-      <section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
@@ -330,7 +332,7 @@ export default function Home() {
       </section>
 
       {/* ── Industries ── */}
-      <section className="py-24 lg:py-32" style={{ background: 'var(--color-primary)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
             <div>
@@ -382,7 +384,7 @@ export default function Home() {
       </section>
 
       {/* ── Our Approach ── */}
-      <section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-xl mb-16">
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
@@ -425,7 +427,7 @@ export default function Home() {
       </section>
 
       {/* ── Selected Engagements ── */}
-      <section className="py-24 lg:py-32" style={{ background: 'var(--color-primary)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <div>
@@ -501,7 +503,7 @@ export default function Home() {
 
 
       {/* ── Founder's Note ── */}
-<section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
+<section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
@@ -565,7 +567,7 @@ export default function Home() {
 </section>
 
       {/* ── Final CTA ── */}
-      <section className="py-24 lg:py-32" style={{ background: 'var(--color-primary)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2
             className="font-display text-4xl lg:text-6xl font-semibold text-white mb-8"
