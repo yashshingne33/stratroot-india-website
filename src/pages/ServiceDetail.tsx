@@ -136,7 +136,7 @@ export default function ServiceDetail() {
               {data.tagline}
             </p>
             <h1
-              className="font-display text-5xl lg:text-6xl font-semibold text-white"
+              className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white"
               style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
             >
               {data.title}
