@@ -147,7 +147,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* ── Detail ── */}
-      <section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             <div className="lg:col-span-3">
