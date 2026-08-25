@@ -118,7 +118,7 @@ export default function Services() {
             </span>
           </div>
           <h1
-            className="font-display text-5xl lg:text-6xl font-semibold text-white max-w-3xl mb-6"
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-3xl mb-6"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
             Consulting Designed to
@@ -142,7 +142,7 @@ export default function Services() {
                 className="group border rounded-lg bg-white overflow-hidden"
                 style={{ borderColor: 'var(--color-border)' }}
               >
-                <div className="p-8 lg:p-10">
+                <div className="p-6 sm:p-8 lg:p-10">
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     <div className="lg:col-span-1 flex items-start">
                       <span
@@ -207,7 +207,7 @@ export default function Services() {
 
           {/* ── Custom Strategic Engagements ── */}
           <div
-            className="mt-10 p-10 lg:p-12 rounded-lg border text-center"
+            className="mt-10 p-6 sm:p-8 lg:p-12 rounded-lg border text-center"
             style={{ borderColor: 'var(--color-border)', background: 'var(--color-primary)' }}
           >
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
