@@ -105,7 +105,7 @@ export default function Contact() {
             </span>
           </div>
           <h1
-            className="font-display text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
             Let's Discuss the
@@ -120,7 +120,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32" style={{ background: 'var(--color-surface)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             {/* ── Contact details ── */}
@@ -189,7 +189,7 @@ export default function Contact() {
             {/* ── Form ── */}
             <div className="lg:col-span-8">
               {submitted ? (
-                <div className="p-12 border rounded-lg bg-white text-center shadow-sm" style={{ borderColor: 'var(--color-border)' }}>
+                <div className="p-8 sm:p-10 lg:p-12 border rounded-lg bg-white text-center shadow-sm" style={{ borderColor: 'var(--color-border)' }}>
                   <div
                     className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
                     style={{ background: 'rgba(28,55,42,0.08)' }}
@@ -206,7 +206,7 @@ export default function Contact() {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="p-8 lg:p-10 border rounded-lg bg-white shadow-sm"
+                  className="p-6 sm:p-8 lg:p-10 border rounded-lg bg-white shadow-sm"
                   style={{ borderColor: 'var(--color-border)' }}
                 >
                   <h2 className="font-display text-2xl font-semibold mb-8" style={{ color: 'var(--color-primary)' }}>

@@ -43,7 +43,7 @@ export default function Consultation() {
             </span>
           </div>
           <h1
-            className="font-display text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
             A Structured
@@ -84,7 +84,7 @@ export default function Consultation() {
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           {step === 3 ? (
             <div
-              className="text-center py-16 bg-white p-8 lg:p-12 rounded-lg border shadow-sm"
+              className="text-center py-16 bg-whitep-6 sm:p-8 lg:p-12 rounded-lg border shadow-sm"
               style={{ borderColor: 'var(--color-border)' }}
             >
               <div
@@ -114,7 +114,7 @@ export default function Consultation() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="bg-white p-8 lg:p-10 border rounded-lg shadow-sm"
+              className="bg-white p-6 sm:p-8 lg:p-10 border rounded-lg shadow-sm"
               style={{ borderColor: 'var(--color-border)' }}
             >
               {/* Step indicator */}
@@ -251,7 +251,7 @@ export default function Consultation() {
                       <label className="block text-xs font-semibold mb-3 uppercase tracking-widest" style={{ color: 'var(--color-muted)' }}>
                         Preferred Time (IST) *
                       </label>
-                      <div className="grid grid-cols-4 gap-2">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                         {TIME_SLOTS.map((slot) => (
                           <button
                             key={slot}

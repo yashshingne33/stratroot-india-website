@@ -120,21 +120,17 @@ export default function Nav() {
               Case Studies
             </Link>
             <Link
-              to="/insights"
-              className={`text-sm font-medium transition-colors hover:text-[var(--color-accent)] ${textColor}`}
-            >
-              Insights
-            </Link>
-          </nav>
-
-          {/* CTA */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Link
               to="/contact"
               className={`text-sm font-medium transition-colors hover:text-[var(--color-accent)] ${textColor}`}
             >
               Contact
             </Link>
+          
+          </nav>
+
+          {/* CTA */}
+          <div className="hidden lg:flex items-center gap-4">
+    
             <Link
               to="/consultation"
               className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-white rounded"
@@ -164,7 +160,7 @@ export default function Nav() {
               { label: 'Services', to: '/services' },
               { label: 'Industries', to: '/industries' },
               { label: 'Case Studies', to: '/case-studies' },
-              { label: 'Insights', to: '/insights' },
+        
               { label: 'Contact', to: '/contact' },
             ].map((item) => (
               <Link

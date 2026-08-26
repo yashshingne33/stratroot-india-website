@@ -6,7 +6,6 @@ const QUICK_LINKS = [
   { label: 'Services', to: '/services' },
   { label: 'Industries', to: '/industries' },
   { label: 'Case Studies', to: '/case-studies' },
-  { label: 'Insights', to: '/insights' },
   { label: 'Contact', to: '/contact' },
 ]
 

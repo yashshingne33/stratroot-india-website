@@ -7,7 +7,6 @@ import ServiceDetail from './pages/ServiceDetail'
 import Industries from './pages/Industries'
 import CaseStudies from './pages/CaseStudies'
 import CaseStudyDetail from './pages/CaseStudyDetail'
-import Insights from './pages/Insights'
 import ArticleDetail from './pages/ArticleDetail'
 import Contact from './pages/Contact'
 import Consultation from './pages/Consultation'
@@ -26,8 +25,6 @@ export const router = createBrowserRouter([
       { path: 'industries', Component: Industries },
       { path: 'case-studies', Component: CaseStudies },
       { path: 'case-studies/:slug', Component: CaseStudyDetail },
-      { path: 'insights', Component: Insights },
-      { path: 'insights/:slug', Component: ArticleDetail },
       { path: 'contact', Component: Contact },
       { path: 'consultation', Component: Consultation },
       { path: 'privacy', Component: Privacy },
