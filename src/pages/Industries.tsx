@@ -48,7 +48,7 @@ export default function Industries() {
             </span>
           </div>
           <h1
-            className="font-display text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
             Selected Sectors
@@ -76,7 +76,7 @@ export default function Industries() {
                 <div className={i % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div
                     className="overflow-hidden rounded-lg"
-                    style={{ height: '360px', background: 'var(--color-border)' }}
+                    style={{ background: 'var(--color-border)' }}
                   >
                     <img
                       src={`https://images.unsplash.com/${ind.img}?w=800&h=500&fit=crop&auto=format`}
@@ -120,7 +120,7 @@ export default function Industries() {
 
           {/* ── Selective Approach note ── */}
           <div
-            className="mt-16 p-10 rounded-lg border text-center"
+            className="mt-16 p-6 sm:p-8 lg:p-10 rounded-lg border text-center"
             style={{ borderColor: 'var(--color-border)', background: 'var(--color-primary)' }}
           >
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
@@ -138,7 +138,7 @@ export default function Industries() {
       {/* ── CTA ── */}
       <section className="py-20" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-display text-3xl lg:text-4xl font-semibold text-white mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-white mb-6">
             Don't see your industry?
           </h2>
           <p className="text-sm mb-8" style={{ color: 'var(--color-muted)' }}>
