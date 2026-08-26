@@ -475,7 +475,7 @@ export default function Home() {
       </section>
 
       {/* ── Founder's Note ── */}
-      <section className="py-20 lg:py-24" style={{ background: 'var(--color-surface)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
@@ -518,7 +518,7 @@ export default function Home() {
 
                 <blockquote
                   className="font-serif italic text-2xl lg:text-[1.85rem] leading-[1.6] tracking-tight mb-10 font-normal"
-                  style={{ color: 'var(--color-charcoal)' }}
+                  style={{ color: '#334155' }}
                 >
                   “At StratRoot, we believe businesses do not need more generic advice. They need clarity
                   on what to do next, structured execution and an accountable partner who understands
@@ -528,9 +528,7 @@ export default function Home() {
                 </blockquote>
               </div>
 
-              {/* Signature-style name treatment */}
               <div className="pt-6 border-t flex flex-col sm:flex-row sm:items-end justify-between gap-4" style={{ borderColor: 'var(--color-border)' }}>
-              
                 <div className="flex items-center gap-3">
                   <span className="w-8 h-px" style={{ background: 'var(--color-gold)' }} />
                   <p className="text-xs italic font-medium" style={{ color: 'var(--color-muted)' }}>
