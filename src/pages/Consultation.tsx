@@ -28,6 +28,22 @@ export default function Consultation() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+
+    const waMessage = encodeURIComponent(
+      `New Consultation Request\n\n` +
+      `Name: ${form.name}\n` +
+      `Company: ${form.company}\n` +
+      `Email: ${form.email}\n` +
+      `Phone: ${form.phone}\n` +
+      `Service: ${form.service}\n` +
+      `Challenge: ${form.challenge}\n` +
+      `Preferred Date: ${form.date}\n` +
+      `Preferred Time: ${form.time}\n` +
+      `Meeting Mode: ${form.mode}`
+    )
+    const waNumber = import.meta.env.VITE_WHATSAPP_NUMBER
+    window.open(`https://wa.me/${waNumber}?text=${waMessage}`, '_blank')
+
     setStep(3)
   }
 
@@ -80,11 +96,11 @@ export default function Consultation() {
         </div>
       </div>
 
-      <section className="py-16 lg:py-24" style={{ background: 'var(--color-surface)' }}>
+      <section className="py-16 lg:py-20" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           {step === 3 ? (
             <div
-              className="text-center py-16 bg-whitep-6 sm:p-8 lg:p-12 rounded-lg border shadow-sm"
+              className="text-center py-10 sm:py-12 lg:py-16 bg-white p-6 sm:p-8 lg:p-12 rounded-lg border shadow-sm"
               style={{ borderColor: 'var(--color-border)' }}
             >
               <div
@@ -94,21 +110,21 @@ export default function Consultation() {
                 <CheckCircle size={28} style={{ color: 'var(--color-accent)' }} />
               </div>
               <h2 className="font-display text-3xl font-semibold mb-4" style={{ color: 'var(--color-primary)' }}>
-                You're booked.
+                Almost there.
               </h2>
               <p className="text-base mb-2" style={{ color: 'var(--color-charcoal)' }}>
-                Your conversation has been requested for <strong>{form.date}</strong> at{' '}
-                <strong>{form.time}</strong>.
+                We've opened WhatsApp with your requested slot of <strong>{form.date}</strong> at{' '}
+                <strong>{form.time}</strong> pre-filled.
               </p>
               <p className="text-sm mb-8" style={{ color: 'var(--color-muted)' }}>
-                We'll confirm by email to <strong>{form.email}</strong> once the slot is verified.
+                Please send the message to confirm your consultation request with our team.
               </p>
               <div
                 className="inline-block px-6 py-4 border rounded-lg text-sm"
                 style={{ color: 'var(--color-charcoal)', borderColor: 'var(--color-border)', background: 'var(--color-surface)' }}
               >
                 <p className="font-semibold mb-1" style={{ color: 'var(--color-primary)' }}>Next steps</p>
-                <p>Check your email for confirmation and the joining details.</p>
+                <p>Once we receive your message, we'll confirm the slot and share the joining details.</p>
               </div>
             </div>
           ) : (
@@ -118,7 +134,7 @@ export default function Consultation() {
               style={{ borderColor: 'var(--color-border)' }}
             >
               {/* Step indicator */}
-              <div className="flex items-center gap-4 mb-10">
+              <div className="flex items-center gap-2 sm:gap-4 mb-10">
                 {[1, 2].map((s) => (
                   <div key={s} className="flex items-center gap-2">
                     <div
@@ -293,8 +309,8 @@ export default function Consultation() {
                           </button>
                         ))}
                       </div>
-                    </div>
-                    <div className="flex gap-3">
+                    </div>flex flex-col sm:flex-row gap-3
+                    <div className="">
                       <button
                         type="button"
                         onClick={() => setStep(1)}
@@ -306,7 +322,7 @@ export default function Consultation() {
                       <button
                         type="submit"
                         disabled={!form.date || !form.time}
-                        className="flex-1 flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold text-white rounded transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                        className="w-full sm:flex-1 flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold text-white rounded transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
                         style={{ background: 'var(--color-accent)' }}
                       >
                         Confirm Booking

@@ -134,7 +134,7 @@ export default function Contact() {
                     </p>
                   </div>
                   <p className="text-base font-medium" style={{ color: 'var(--color-primary)' }}>
-                    [Official business email]
+                    stratroot@gmail.com
                   </p>
                 </div>
                 <div>
@@ -145,7 +145,7 @@ export default function Contact() {
                     </p>
                   </div>
                   <p className="text-base font-medium" style={{ color: 'var(--color-primary)' }}>
-                    [Official number]
+                    9730755721
                   </p>
                 </div>
                 <div>
