@@ -193,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* ── Core Challenges / Introduction ── */}
-      <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
+      {/* <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mb-16">
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
@@ -236,7 +236,96 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* ── Core Challenges / Introduction ── */}
+<section className="py-20 lg:py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    
+    {/* Section Header */}
+    <div className="max-w-3xl mb-16">
+      <p 
+        className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" 
+        style={{ color: 'var(--color-gold)' }}
+      >
+        The Core Challenge
+      </p>
+
+      <h2
+        className="font-display text-4xl lg:text-5xl font-semibold mb-6 tracking-tight"
+        style={{ color: 'var(--color-charcoal)', lineHeight: 1.15 }}
+      >
+        Strategy Creates Direction.
+      
+        <br />
+        <span className="font-display font-normal" style={{ color: 'var(--color-charcoal)' }}>
+          Execution Creates Results.
+        </span>
+      </h2>
+
+      <p className="text-sm lg:text-base leading-relaxed" style={{ color: 'var(--color-muted)' }}>
+        Businesses rarely struggle because of a lack of opportunities. Growth usually slows
+        when market intelligence, commercial priorities, internal capabilities and execution
+        are not properly connected. StratRoot works alongside business owners and management
+        teams to identify the right opportunities, build a practical roadmap and coordinate
+        its execution.
+      </p>
+    </div>
+
+    {/* Cards Grid */}
+    <div 
+      className="grid grid-cols-1 md:grid-cols-3 border rounded-lg overflow-hidden"
+      style={{ borderColor: 'var(--color-border)', background: 'white' }}
+    >
+      {CORE_CHALLENGES.map((c, i) => (
+        <div
+          key={c.title}
+          className="group relative p-8 lg:p-10 border-b md:border-b-0 md:border-r transition-all duration-300 hover:bg-[var(--color-surface)]"
+          style={{
+            borderColor: 'var(--color-border)',
+            borderRightWidth: i < CORE_CHALLENGES.length - 1 ? 1 : 0,
+          }}
+        >
+          {/* Top Gold Accent Line on Hover */}
+          <div 
+            className="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style={{ background: 'var(--color-gold)' }}
+          />
+
+          {/* Icon & Step Number */}
+          <div className="flex items-center justify-between mb-8">
+            <div 
+              className="w-10 h-10 rounded-md flex items-center justify-center transition-colors duration-300"
+              style={{ background: 'var(--color-surface)' }}
+            >
+              <c.icon size={20} style={{ color: 'var(--color-accent)' }} />
+            </div>
+            <span 
+              className="font-serif italic text-lg font-medium opacity-60"
+              style={{ color: 'var(--color-gold)' }}
+            >
+              0{i + 1}
+            </span>
+          </div>
+
+          {/* Title */}
+          <h3 
+            className="font-semibold text-lg mb-3 tracking-tight group-hover:translate-x-0.5 transition-transform duration-300" 
+            style={{ color: 'var(--color-charcoal)' }}
+          >
+            {c.title}
+          </h3>
+
+          {/* Description */}
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
+            {c.body}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
 
       {/* ── Services Overview ── */}
       <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
