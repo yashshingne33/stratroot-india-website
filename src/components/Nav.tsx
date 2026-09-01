@@ -14,6 +14,7 @@ const navLinks = [
   { label: 'About', to: '/about' },
   { label: 'Industries', to: '/industries' },
   { label: 'Case Studies', to: '/case-studies' },
+  { label: 'Insights', to: '/insights' },
   { label: 'Contact', to: '/contact' },
 ]
 
@@ -142,11 +143,14 @@ export default function Nav() {
               )}
             </div>
 
-            <NavItem to="/industries" active={pathname === '/industries'}>
+            {/* <NavItem to="/industries" active={pathname === '/industries'}>
               Industries
-            </NavItem>
-            <NavItem to="/case-studies" active={pathname === '/case-studies'}>
+            </NavItem> */}
+            {/* <NavItem to="/case-studies" active={pathname === '/case-studies'}>
               Case Studies
+            </NavItem> */}
+            <NavItem to="/insights" active={pathname === '/insights'}>
+              Insights
             </NavItem>
             <NavItem to="/contact" active={pathname === '/contact'}>
               Contact

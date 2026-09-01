@@ -256,11 +256,12 @@ export default function Home() {
         style={{ color: 'var(--color-charcoal)', lineHeight: 1.15 }}
       >
         Strategy Creates Direction.
+        Execution Creates Results.
       
         <br />
-        <span className="font-display font-normal" style={{ color: 'var(--color-charcoal)' }}>
+        {/* <span className="font-display font-normal" style={{ color: 'var(--color-charcoal)' }}>
           Execution Creates Results.
-        </span>
+        </span> */}
       </h2>
 
       <p className="text-sm lg:text-base leading-relaxed" style={{ color: 'var(--color-muted)' }}>
