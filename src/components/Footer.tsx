@@ -4,14 +4,15 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 const QUICK_LINKS = [
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
-  { label: 'Industries', to: '/industries' },
-  { label: 'Case Studies', to: '/case-studies' },
+  // { label: 'Industries', to: '/industries' },
+  // { label: 'Case Studies', to: '/case-studies' },
+  { label: 'Insights', to: '/insights' },
   { label: 'Contact', to: '/contact' },
 ]
 
 const SERVICES = [
   { label: 'Export Market Development', slug: 'export-market-development' },
-  { label: '& Channel Development', slug: 'sales-channel-development' },
+  { label: 'Export Sales & Channel Development', slug: 'export-sales-channel-development' },
   { label: 'Business Strategy & Commercial Advisory', slug: 'business-strategy-advisory' },
   { label: 'Operations & Execution Systems', slug: 'operations-execution-systems' },
   { label: 'Market-Ready Business Communication', slug: 'market-ready-communication' },
@@ -85,10 +86,10 @@ export default function Footer() {
                 <Mail size={14} className="mt-0.5 flex-shrink-0" />
                 <span className="break-words">stratroot@gmail.com</span>
               </li>
-              <li className="flex items-start gap-2 text-sm min-w-0" style={{ color: 'var(--color-muted)' }}>
+              {/* <li className="flex items-start gap-2 text-sm min-w-0" style={{ color: 'var(--color-muted)' }}>
                 <Phone size={14} className="mt-0.5 flex-shrink-0" />
                 <span className="break-words">9730755721</span>
-              </li>
+              </li> */}
               <li className="flex items-start gap-2 text-sm min-w-0" style={{ color: 'var(--color-muted)' }}>
                 <MapPin size={14} className="mt-0.5 flex-shrink-0" />
                 <span className="break-words">Nagpur, Maharashtra, India</span>
