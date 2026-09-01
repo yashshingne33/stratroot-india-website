@@ -26,8 +26,8 @@ const SERVICE_DATA: Record<string, {
     ],
     suitableFor: 'Manufacturers, FPOs, processors, merchant exporters and businesses entering exports for the first time.',
   },
-  'sales-channel-development': {
-    title: 'Sales & Channel Development',
+  'export-sales-channel-development': {
+    title: 'Export Sales & Channel Development',
     tagline: 'Build a More Structured Route to Customers',
     desc: 'StratRoot helps businesses develop practical sales systems and identify appropriate domestic or international channels.',
     deliverables: [

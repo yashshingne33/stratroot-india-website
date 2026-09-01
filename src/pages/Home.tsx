@@ -32,9 +32,9 @@ const SERVICES = [
   },
   {
     icon: Users,
-    label: 'Sales & Channel Development',
+    label: 'Export Sales & Channel Development',
     desc: 'Create structured domestic and international sales pipelines across distributors, retailers, institutions, channel partners and direct B2B buyers.',
-    slug: 'sales-channel-development',
+    slug: 'export-sales-channel-development',
   },
   {
     icon: BarChart3,
@@ -64,42 +64,6 @@ const WHY_STRATROOT = [
   'Confidential and commercially responsible working approach',
 ]
 
-const INDUSTRIES = [
-  { label: 'Agriculture, Food Processing & FPOs', img: 'photo-1500937386664-56d1dfef3854' },
-  { label: 'Manufacturing & Industrial Products', img: 'photo-1581091226825-a6a2a5aee158' },
-  { label: 'Exporters & Trading Businesses', img: 'photo-1586528116311-ad8dd3c8310d' },
-  { label: 'Consumer & Educational Products', img: 'photo-1497633762265-9d179a990aa6' },
-  { label: 'Infrastructure & Project Supplies', img: 'photo-1541888946425-d81bb19240f5' },
-]
-
-const APPROACH = [
-  {
-    icon: Search,
-    stage: 'Understand',
-    body: 'Study the business, products, capabilities, current challenges and desired outcomes.',
-  },
-  {
-    icon: Activity,
-    stage: 'Diagnose',
-    body: 'Examine the market, competition, commercial viability, operational gaps and priorities.',
-  },
-  {
-    icon: ClipboardList,
-    stage: 'Define',
-    body: 'Prepare a focused roadmap with actions, responsibilities, timelines and checkpoints.',
-  },
-  {
-    icon: PlayCircle,
-    stage: 'Execute',
-    body: 'Work with the management, team, vendors and stakeholders to move the plan forward.',
-  },
-  {
-    icon: RefreshCw,
-    stage: 'Review',
-    body: 'Address bottlenecks and adjust priorities using actual business feedback.',
-  },
-]
-
 const ENGAGEMENTS = [
   {
     type: 'Agricultural Producer Organisation',
@@ -117,8 +81,6 @@ const ENGAGEMENTS = [
     type: 'Project Supply Opportunity',
     desc: 'Quantity analysis, vendor coordination, commercial costing, proposal preparation and execution planning.',
   },
-
-  
 ]
 
 export default function Home() {
@@ -193,20 +155,28 @@ export default function Home() {
       </section>
 
       {/* ── Core Challenges / Introduction ── */}
-      {/* <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
+      <section className="py-20 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-2xl mb-16">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
+          
+          {/* Section Header */}
+          <div className="max-w-3xl mb-16">
+            <p 
+              className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" 
+              style={{ color: 'var(--color-gold)' }}
+            >
               The Core Challenge
             </p>
+
             <h2
-              className="font-display text-4xl lg:text-5xl font-semibold mb-6"
+              className="font-display text-4xl lg:text-5xl font-semibold mb-6 tracking-tight"
               style={{ color: 'var(--color-charcoal)', lineHeight: 1.15 }}
             >
               Strategy Creates Direction.
-              <br />
               Execution Creates Results.
+            
+              <br />
             </h2>
+
             <p className="text-sm lg:text-base leading-relaxed" style={{ color: 'var(--color-muted)' }}>
               Businesses rarely struggle because of a lack of opportunities. Growth usually slows
               when market intelligence, commercial priorities, internal capabilities and execution
@@ -215,20 +185,52 @@ export default function Home() {
               its execution.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[var(--color-border)]">
+
+          {/* Cards Grid */}
+          <div 
+            className="grid grid-cols-1 md:grid-cols-3 border rounded-lg overflow-hidden"
+            style={{ borderColor: 'var(--color-border)', background: 'white' }}
+          >
             {CORE_CHALLENGES.map((c, i) => (
               <div
                 key={c.title}
-                className="p-8 border-b md:border-b-0 md:border-r"
+                className="group relative p-8 lg:p-10 border-b md:border-b-0 md:border-r transition-all duration-300 hover:bg-[var(--color-surface)]"
                 style={{
                   borderColor: 'var(--color-border)',
                   borderRightWidth: i < CORE_CHALLENGES.length - 1 ? 1 : 0,
                 }}
               >
-                <c.icon size={22} className="mb-5" style={{ color: 'var(--color-accent)' }} />
-                <h3 className="font-semibold text-base mb-3" style={{ color: 'var(--color-charcoal)' }}>
+                {/* Top Gold Accent Line on Hover */}
+                <div 
+                  className="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ background: 'var(--color-gold)' }}
+                />
+
+                {/* Icon & Step Number */}
+                <div className="flex items-center justify-between mb-8">
+                  <div 
+                    className="w-10 h-10 rounded-md flex items-center justify-center transition-colors duration-300"
+                    style={{ background: 'var(--color-surface)' }}
+                  >
+                    <c.icon size={20} style={{ color: 'var(--color-accent)' }} />
+                  </div>
+                  <span 
+                    className="font-serif italic text-lg font-medium opacity-60"
+                    style={{ color: 'var(--color-gold)' }}
+                  >
+                    0{i + 1}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 
+                  className="font-semibold text-lg mb-3 tracking-tight group-hover:translate-x-0.5 transition-transform duration-300" 
+                  style={{ color: 'var(--color-charcoal)' }}
+                >
                   {c.title}
                 </h3>
+
+                {/* Description */}
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
                   {c.body}
                 </p>
@@ -236,97 +238,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section> */}
-
-      {/* ── Core Challenges / Introduction ── */}
-<section className="py-20 lg:py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-6 lg:px-8">
-    
-    {/* Section Header */}
-    <div className="max-w-3xl mb-16">
-      <p 
-        className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" 
-        style={{ color: 'var(--color-gold)' }}
-      >
-        The Core Challenge
-      </p>
-
-      <h2
-        className="font-display text-4xl lg:text-5xl font-semibold mb-6 tracking-tight"
-        style={{ color: 'var(--color-charcoal)', lineHeight: 1.15 }}
-      >
-        Strategy Creates Direction.
-        Execution Creates Results.
-      
-        <br />
-        {/* <span className="font-display font-normal" style={{ color: 'var(--color-charcoal)' }}>
-          Execution Creates Results.
-        </span> */}
-      </h2>
-
-      <p className="text-sm lg:text-base leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-        Businesses rarely struggle because of a lack of opportunities. Growth usually slows
-        when market intelligence, commercial priorities, internal capabilities and execution
-        are not properly connected. StratRoot works alongside business owners and management
-        teams to identify the right opportunities, build a practical roadmap and coordinate
-        its execution.
-      </p>
-    </div>
-
-    {/* Cards Grid */}
-    <div 
-      className="grid grid-cols-1 md:grid-cols-3 border rounded-lg overflow-hidden"
-      style={{ borderColor: 'var(--color-border)', background: 'white' }}
-    >
-      {CORE_CHALLENGES.map((c, i) => (
-        <div
-          key={c.title}
-          className="group relative p-8 lg:p-10 border-b md:border-b-0 md:border-r transition-all duration-300 hover:bg-[var(--color-surface)]"
-          style={{
-            borderColor: 'var(--color-border)',
-            borderRightWidth: i < CORE_CHALLENGES.length - 1 ? 1 : 0,
-          }}
-        >
-          {/* Top Gold Accent Line on Hover */}
-          <div 
-            className="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            style={{ background: 'var(--color-gold)' }}
-          />
-
-          {/* Icon & Step Number */}
-          <div className="flex items-center justify-between mb-8">
-            <div 
-              className="w-10 h-10 rounded-md flex items-center justify-center transition-colors duration-300"
-              style={{ background: 'var(--color-surface)' }}
-            >
-              <c.icon size={20} style={{ color: 'var(--color-accent)' }} />
-            </div>
-            <span 
-              className="font-serif italic text-lg font-medium opacity-60"
-              style={{ color: 'var(--color-gold)' }}
-            >
-              0{i + 1}
-            </span>
-          </div>
-
-          {/* Title */}
-          <h3 
-            className="font-semibold text-lg mb-3 tracking-tight group-hover:translate-x-0.5 transition-transform duration-300" 
-            style={{ color: 'var(--color-charcoal)' }}
-          >
-            {c.title}
-          </h3>
-
-          {/* Description */}
-          <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-            {c.body}
-          </p>
-        </div>
-      ))}
-    </div>
-
-  </div>
-</section>
+      </section>
 
       {/* ── Services Overview ── */}
       <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
@@ -417,101 +329,6 @@ export default function Home() {
                 (to be added)
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Industries ── */}
-      <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-            <div>
-              <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
-                Industries
-              </p>
-              <h2
-                className="font-display text-4xl lg:text-5xl font-semibold text-white"
-                style={{ lineHeight: 1.15 }}
-              >
-                Selected sectors
-                <br />
-                we support
-              </h2>
-            </div>
-            <Link to="/industries" className="inline-flex items-center gap-2 text-sm font-medium" style={{ color: 'var(--color-gold)' }}>
-              All Industries <ArrowUpRight size={14} />
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            {INDUSTRIES.map((ind) => (
-              <Link
-                key={ind.label}
-                to="/industries"
-                className="group relative overflow-hidden rounded-lg aspect-video"
-              >
-                <img
-                  src={`https://images.unsplash.com/${ind.img}?w=600&h=340&fit=crop&auto=format`}
-                  alt={ind.label}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{ background: 'linear-gradient(to top, rgba(16,42,67,0.85) 30%, transparent 70%)' }}
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <h3 className="font-display text-sm font-semibold text-white leading-snug">
-                    {ind.label}
-                  </h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <p className="text-xs mt-6" style={{ color: 'var(--color-muted)' }}>
-            We accept assignments where our capabilities can create meaningful commercial or
-            operational value — each prospective engagement is assessed before scope is finalised.
-          </p>
-        </div>
-      </section>
-
-      {/* ── Our Approach ── */}
-      <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-xl mb-16">
-            <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
-              How We Work
-            </p>
-            <h2
-              className="font-display text-4xl lg:text-5xl font-semibold"
-              style={{ color: 'var(--color-charcoal)', lineHeight: 1.15 }}
-            >
-              Our Approach
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-0 border border-[var(--color-border)]">
-            {APPROACH.map((a, i) => (
-              <div
-                key={a.stage}
-                className="p-7 border-b lg:border-b-0 lg:border-r"
-                style={{
-                  borderColor: 'var(--color-border)',
-                  borderRightWidth: i < APPROACH.length - 1 ? 1 : 0,
-                }}
-              >
-                <span
-                  className="inline-flex items-center justify-center w-9 h-9 rounded-full text-xs font-bold mb-5"
-                  style={{ background: 'var(--color-accent)', color: 'white' }}
-                >
-                  {i + 1}
-                </span>
-                <a.icon size={18} className="mb-3" style={{ color: 'var(--color-accent)' }} />
-                <h3 className="font-semibold text-sm mb-2" style={{ color: 'var(--color-charcoal)' }}>
-                  {a.stage}
-                </h3>
-                <p className="text-xs leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-                  {a.body}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -660,5 +477,3 @@ export default function Home() {
     </div>
   )
 }
-
-

@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 
 const services = [
   { label: 'Export Market Development', slug: 'export-market-development' },
-  { label: 'Sales & Channel Development', slug: 'sales-channel-development' },
+  { label: 'Export Sales & Channel Development', slug: 'export-sales-channel-development' },
   { label: 'Business Strategy & Commercial Advisory', slug: 'business-strategy-advisory' },
   { label: 'Operations & Execution Systems', slug: 'operations-execution-systems' },
   { label: 'Market-Ready Business Communication', slug: 'market-ready-communication' },

@@ -24,8 +24,8 @@ const SERVICES = [
   },
   {
     icon: Users,
-    label: 'Sales & Channel Development',
-    slug: 'sales-channel-development',
+    label: 'Export Sales & Channel Development',
+    slug: 'export-sales-channel-development',
     tagline: 'Build a More Structured Route to Customers',
     desc: 'StratRoot helps businesses develop practical sales systems and identify appropriate domestic or international channels.',
     deliverables: [
