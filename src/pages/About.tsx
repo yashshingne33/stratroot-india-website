@@ -32,35 +32,7 @@ const VALUES = [
 export default function About() {
   return (
     <div>
-      {/* ── Page Header ── */}
-      {/* <section
-        className="pt-36 pb-20 lg:pt-48 lg:pb-28"
-        style={{ background: 'var(--color-primary)' }}
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-8">
-            <span className="h-px w-12" style={{ background: 'var(--color-gold)' }} />
-            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-gold)' }}>
-              About Us
-            </span>
-          </div>
-          <h1
-            className="font-display text-5xl lg:text-7xl font-semibold text-white max-w-3xl"
-            style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-          >
-            Strategy Rooted in Reality.
-            <br />
-            <em style={{ color: 'var(--color-gold)', fontStyle: 'normal' }}>Growth Built Through Execution.</em>
-          </h1>
-          <p className="mt-8 text-lg max-w-2xl" style={{ color: 'var(--color-muted)' }}>
-            StratRoot India is a growth and execution consulting firm that works with businesses to
-            strengthen market positioning, develop sales opportunities, enter new markets and
-            improve operating discipline.
-          </p>
-        </div>
-      </section> */}
-
-
+      
       {/* ── Header ── */}
       <section className="pt-36 pb-20 lg:pt-48 lg:pb-24" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -121,23 +93,23 @@ export default function About() {
 
             {/* Placeholder for authentic working photograph — swap once supplied */}
             <div className="relative mx-auto w-full h-[280px] sm:h-[360px] lg:h-[480px]">
-  {/* offset frame — sits behind, peeking out bottom-left this time for variation */}
-  <div
-    className="absolute -bottom-4 -left-4 w-full h-full rounded-lg border"
-    style={{ borderColor: 'var(--color-gold)' }}
-  />
+              {/* offset frame — sits behind, peeking out bottom-left this time for variation */}
+              <div
+                className="absolute -bottom-4 -left-4 w-full h-full rounded-lg border"
+                style={{ borderColor: 'var(--color-gold)' }}
+              />
 
-  <div
-    className="relative rounded-lg border overflow-hidden shadow-lg h-full"
-    style={{ borderColor: 'var(--color-border)' }}
-  >
-    <img
-      src="/images/field-execution.jpg"
-      alt="StratRoot field execution work"
-      className="w-full h-full object-cover"
-    />
-  </div>
-</div>
+              <div
+                className="relative rounded-lg border overflow-hidden shadow-lg h-full"
+                style={{ borderColor: 'var(--color-border)' }}
+              >
+                <img
+                  src="/images/field-execution.jpg"
+                  alt="StratRoot field execution work"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

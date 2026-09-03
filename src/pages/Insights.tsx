@@ -73,26 +73,28 @@ export default function Insights() {
 
   return (
     <div>
-      {/* Header */}
-      <div className="pt-36 pb-20 lg:pt-48 lg:pb-28" style={{ background: '#102A43' }}>
+
+      <section className="pt-36 pb-20 lg:pt-48 lg:pb-24" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
-            <span className="h-px w-12" style={{ background: '#C6A15B' }} />
-            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#C6A15B' }}>Insights</span>
+            <span className="h-px w-12" style={{ background: 'var(--color-gold)' }} />
+            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-gold)' }}>
+              Insights
+            </span>
           </div>
           <h1
-            className="font-display text-5xl lg:text-7xl font-semibold text-white max-w-3xl"
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
             Thinking that
             <br />
-            <em style={{ color: '#C6A15B' }}>cuts through.</em>
+            <em style={{ color: 'var(--color-gold)', fontStyle: 'normal' }}>cuts through.</em>
           </h1>
-          <p className="mt-8 text-lg max-w-xl" style={{ color: '#BAC7D5' }}>
-            Grounded analysis on Indian business — written by people who spend their time inside businesses, not writing about them from the outside.
+          <p className="text-lg max-w-lg" style={{ color: 'var(--color-muted)' }}>
+           Grounded analysis on Indian business — written by people who spend their time inside businesses, not writing about them from the outside.
           </p>
         </div>
-      </div>
+      </section>
 
       <section className="py-24 lg:py-32" style={{ background: '#F8FAF7' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
