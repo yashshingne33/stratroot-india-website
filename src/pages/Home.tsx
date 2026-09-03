@@ -1,9 +1,29 @@
 import { Link } from 'react-router'
 import {
-  ArrowRight, ArrowUpRight, CheckCircle, Target, Users, Globe,
+  ArrowRight,Award, ArrowUpRight, CheckCircle, Target, Users, Globe,
   BarChart3, Settings, MessageSquare, Search, Activity,
-  ClipboardList, PlayCircle, RefreshCw, Quote,
+  ClipboardList, PlayCircle, RefreshCw, ChevronRight, Quote, MapPin,
+  TrendingUp,
 } from 'lucide-react'
+
+
+const CAPABILITY_PREVIEW = [
+  {
+    icon: Search,
+    title: 'Market Opportunity Mapping',
+    body: 'Identify high-potential markets and buyer segments aligned with your products and capabilities.',
+  },
+  {
+    icon: Globe,
+    title: 'International Connections',
+    body: 'Access our vetted network of distributors, buyers, and partners across key global markets.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Export Sales Development',
+    body: 'End-to-end support to convert opportunities into sustainable export sales.',
+  },
+]
 
 const CORE_CHALLENGES = [
   {
@@ -20,6 +40,33 @@ const CORE_CHALLENGES = [
     icon: Activity,
     title: 'Execution',
     body: 'Translate recommendations into defined actions, ownership, timelines and review systems.',
+  },
+]
+
+const HOW_WE_WORK = [
+  {
+    icon: Target,
+    step: '01',
+    title: 'Understand',
+    body: 'We learn your business, goals, and market focus.',
+  },
+  {
+    icon: MapPin,
+    step: '02',
+    title: 'Strategize',
+    body: 'We craft a tailored export strategy and action plan.',
+  },
+  {
+    icon: Users,
+    step: '03',
+    title: 'Connect',
+    body: 'We open doors to the right buyers and partners.',
+  },
+  {
+    icon: TrendingUp,
+    step: '04',
+    title: 'Grow',
+    body: 'We support execution and accelerate export growth.',
   },
 ]
 
@@ -86,73 +133,128 @@ const ENGAGEMENTS = [
 export default function Home() {
   return (
     <div>
-      {/* ── Hero ── */}
-      <section
-        className="relative flex flex-col justify-center min-h-[100vh] overflow-hidden"
-        style={{ background: 'var(--color-primary)' }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary) 40%, rgba(16,42,67,0.45) 70%, transparent 100%)',
-            zIndex: 2,
-          }}
-        />
-        <div
-          className="absolute inset-0 w-full h-full pointer-events-none opacity-80"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop')`,
-            backgroundPosition: 'right center',
-            backgroundSize: 'cover',
-            mixBlendMode: 'screen',
-            zIndex: 1,
-          }}
-        />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-24 w-full" style={{ zIndex: 3 }}>
-          <div className="max-w-2xl">
-            <p
-              className="text-xs font-semibold tracking-[0.2em] uppercase mb-6"
-              style={{ color: 'var(--color-gold)' }}
+    {/* ── Hero Section ── */}
+<section
+  className="relative overflow-hidden min-h-[calc(100dvh-4.5rem)] md:min-h-fit xl:min-h-[calc(100dvh-4.5rem)] flex flex-col pt-24 sm:pt-28 lg:pt-24 pb-6 sm:pb-10"
+  style={{ background: 'var(--color-primary)' }}
+>
+  {/* Earth image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1800&auto=format&fit=crop"
+      alt=""
+      className="absolute right-0 top-0 h-full w-[85%] sm:w-[75%] object-cover object-left"
+    />
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          'linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary) 32%, transparent 72%)',
+      }}
+    />
+    <div
+      className="absolute inset-0"
+      style={{ background: 'linear-gradient(180deg, transparent 55%, var(--color-primary) 100%)' }}
+    />
+  </div>
+
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div className="max-w-2xl">
+
+      <h1
+        className="font-display text-[1.65rem] xs:text-3xl sm:text-4xl lg:text-[2.85rem] font-semibold text-white mb-3"
+        style={{ lineHeight: 1.2, letterSpacing: '-0.015em' }}
+      >
+        Rooting Your Business
+        <br />
+        in <span style={{ color: 'var(--color-accent)' }}>Global Markets</span>
+      </h1>
+
+      <p className="text-[13px] sm:text-base text-white/70 max-w-md mb-5 sm:mb-8 leading-relaxed">
+        Export market strategy, buyer connections, and sales development for manufacturers and traders.
+      </p>
+
+      {/* CTAs */}
+      <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3.5 mb-6 sm:mb-10">
+        <Link
+          to="/contact"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-md transition-transform hover:-translate-y-0.5 shadow-md"
+          style={{ background: 'var(--color-accent)' }}
+        >
+          Start a Conversation <ArrowRight size={15} />
+        </Link>
+        <Link
+          to="/services"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium text-white rounded-md border border-white/20 transition-colors hover:bg-white/5"
+        >
+          Explore Our Services
+        </Link>
+      </div>
+
+      {/* Feature row */}
+      <div className="grid grid-cols-3 gap-2.5 sm:gap-6">
+        {[
+          { icon: Globe, title: 'Global Network', body: 'Trusted connections' },
+          { icon: BarChart3, title: 'Market Intelligence', body: 'Actionable insights' },
+          { icon: TrendingUp, title: 'Growth Focused', body: 'Results that matter' },
+        ].map((f) => (
+          <div key={f.title} className="min-w-0 flex items-start gap-1.5 sm:gap-3">
+            <span
+              className="w-6 h-6 sm:w-9 sm:h-9 rounded-full border flex items-center justify-center flex-shrink-0"
+              style={{ borderColor: 'rgba(255,255,255,0.2)' }}
             >
-              Growth · Markets · Execution
-            </p>
-            <h1
-              className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white mb-6"
-              style={{ lineHeight: 1.12, letterSpacing: '-0.01em' }}
-            >
-              Build Stronger Businesses.
-              <br />
-              Reach Better Markets.
-            </h1>
-            <p className="text-base lg:text-lg text-white/80 max-w-xl mb-10 leading-relaxed">
-              StratRoot India helps manufacturers, exporters, FPOs, founders and growth-stage
-              businesses turn commercial opportunities into structured execution — across market
-              development, exports, sales, business operations and strategic projects.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-white rounded transition-transform hover:-translate-y-0.5"
-                style={{ background: 'var(--color-accent)' }}
-              >
-                Discuss Your Business
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-medium rounded border transition-colors hover:bg-white/5"
-                style={{ borderColor: 'var(--color-gold)', color: 'var(--color-gold)' }}
-              >
-                Explore Our Services
-              </Link>
+              <f.icon className="w-3 h-3 sm:w-[15px] sm:h-[15px]" style={{ color: 'var(--color-accent)' }} />
+            </span>
+            <div className="min-w-0">
+              <p className="text-[10px] sm:text-sm font-semibold text-white leading-tight break-words">{f.title}</p>
+              <p className="text-[9px] sm:text-xs text-white/55 leading-tight mt-0.5 break-words">{f.body}</p>
             </div>
-            <p className="text-xs mt-10 tracking-wide" style={{ color: 'var(--color-muted)' }}>
-              Practical strategy. Structured execution. Measurable business progress.
-            </p>
           </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  {/* How We Work — inside hero */}
+  <div
+    className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 lg:mt-12 w-full rounded-2xl border p-4 sm:p-5 lg:p-8"
+    style={{ borderColor: 'rgba(255,255,255,0.1)', background: 'rgba(6,14,22,0.72)', backdropFilter: 'blur(6px)' }}
+  >
+    <div className="flex items-center gap-3 sm:gap-6 mb-4 sm:mb-5 lg:mb-8">
+      <span className="flex-1 h-px" style={{ background: 'var(--color-gold)' }} />
+      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--color-gold)' }} />
+      <h2 className="font-display text-sm sm:text-lg lg:text-xl font-semibold text-white text-center whitespace-nowrap">
+        How We Work
+      </h2>
+      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--color-gold)' }} />
+      <span className="flex-1 h-px" style={{ background: 'var(--color-gold)' }} />
+    </div>
+
+    <div className="divide-y sm:divide-y-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 lg:gap-4" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+      {HOW_WE_WORK.map((s, i) => (
+        <div key={s.step} className="min-w-0 flex items-center sm:items-start gap-4 sm:gap-3 flex-1 py-3 sm:py-0 first:pt-0 last:pb-0">
+          <div
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center flex-shrink-0 sm:mb-2.5"
+            style={{ background: 'rgba(74,222,128,0.15)' }}
+          >
+            <s.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" style={{ color: 'var(--color-accent)' }} />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="text-[10px] font-bold tracking-wide mb-0.5" style={{ color: 'var(--color-gold)' }}>
+              {s.step}
+            </p>
+            <h3 className="font-semibold text-[13px] sm:text-sm mb-0.5 sm:mb-1 text-white">{s.title}</h3>
+            <p className="text-[11px] sm:text-xs leading-snug text-white/60 break-words">{s.body}</p>
+          </div>
+          {i < HOW_WE_WORK.length - 1 && (
+            <ChevronRight size={14} className="hidden lg:block flex-shrink-0 text-white/25 mt-3" />
+          )}
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* ── Core Challenges / Introduction ── */}
       <section className="py-20 lg:py-20 bg-white">
@@ -318,71 +420,30 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Placeholder for authentic founder / working photograph — swap once supplied */}
+           <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
+            {/* offset frame — sits behind, peeking out top-right */}
             <div
-              className="rounded-lg border aspect-[4/5] flex items-center justify-center"
-              style={{ borderColor: 'var(--color-border)', background: 'var(--color-sage, #A8B8A5)' }}
+              className="absolute -top-4 -right-4 w-full h-full rounded-lg border"
+              style={{ borderColor: 'var(--color-gold)' }}
+            />
+
+            <div
+              className="relative rounded-lg border aspect-[4/5] overflow-hidden shadow-lg"
+              style={{ borderColor: 'var(--color-border)' }}
             >
-              <p className="text-xs text-center px-8" style={{ color: 'var(--color-charcoal)' }}>
-                Authentic working / founder photograph
-                <br />
-                (to be added)
-              </p>
+              <img
+                src="/images/world.jpg"
+                alt="StratRoot working session"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── Selected Engagements ── */}
-      <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
-            <div>
-              <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
-                Selected Engagements
-              </p>
-              <h2
-                className="font-display text-4xl lg:text-5xl font-semibold text-white"
-                style={{ lineHeight: 1.15 }}
-              >
-                Evidence of the
-                <br />
-                nature of our work
-              </h2>
-            </div>
-            <Link to="/work" className="inline-flex items-center gap-2 text-sm font-medium" style={{ color: 'var(--color-gold)' }}>
-              View Selected Work <ArrowUpRight size={14} />
-            </Link>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {ENGAGEMENTS.map((e) => (
-              <div
-                key={e.type}
-                className="p-8 rounded-lg border"
-                style={{ borderColor: 'rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.05)' }}
-              >
-                <span
-                  className="inline-block text-xs font-semibold tracking-widest uppercase px-2 py-1 rounded mb-5"
-                  style={{ background: 'rgba(198,161,91,0.15)', color: 'var(--color-gold)' }}
-                >
-                  {e.type}
-                </span>
-                <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>
-                  {e.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-          <p className="text-xs mt-6" style={{ color: 'var(--color-muted)' }}>
-            Engagement details are anonymised. Client names, logos and figures are published only
-            with written permission.
-          </p>
         </div>
       </section>
 
       {/* ── Founder's Note ── */}
-      <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
@@ -394,7 +455,7 @@ export default function Home() {
               </p>
 
               {/* Placeholder for founder photograph */}
-              <div
+              {/* <div
                 className="rounded-xl border aspect-[4/5] flex items-center justify-center mb-6 overflow-hidden shadow-sm transition-all duration-300"
                 style={{ borderColor: 'var(--color-border)', background: 'var(--color-sage, #A8B8A5)' }}
               >
@@ -403,7 +464,35 @@ export default function Home() {
                   <br />
                   <span className="text-[10px] opacity-75 capitalize font-normal">(to be added)</span>
                 </p>
-              </div>
+              </div> */}
+
+         <div
+  className="relative rounded-xl border aspect-[4/5] flex items-center justify-center mb-6 overflow-hidden shadow-sm mx-auto max-w-[220px] sm:max-w-[260px] lg:max-w-none lg:mx-0"
+  style={{ borderColor: 'var(--color-border)', background: 'var(--color-primary)' }}
+>
+  {/* subtle radial glow */}
+  <div
+    className="absolute inset-0"
+    style={{ background: 'radial-gradient(circle at 50% 35%, rgba(74,222,128,0.12), transparent 60%)' }}
+  />
+  {/* thin decorative rings */}
+  <div
+    className="absolute w-40 h-40 rounded-full border"
+    style={{ borderColor: 'rgba(212,175,55,0.25)' }}
+  />
+  <div
+    className="absolute w-32 h-32 rounded-full border"
+    style={{ borderColor: 'rgba(212,175,55,0.4)' }}
+  />
+
+  {/* monogram */}
+  <span
+    className="relative font-display text-5xl font-semibold"
+    style={{ color: 'var(--color-gold)', letterSpacing: '0.02em' }}
+  >
+    SC
+  </span>
+</div>
 
               <p className="font-semibold text-base tracking-tight" style={{ color: 'var(--color-charcoal)' }}>
                 Saurabh Chalse
@@ -425,7 +514,7 @@ export default function Home() {
 
                 <blockquote
                   className="font-serif italic text-2xl lg:text-[1.85rem] leading-[1.6] tracking-tight mb-10 font-normal"
-                  style={{ color: '#334155' }}
+                  style={{ color: '#e0dfe8' }}
                 >
                   “At StratRoot, we believe businesses do not need more generic advice. They need clarity
                   on what to do next, structured execution and an accountable partner who understands
@@ -450,10 +539,10 @@ export default function Home() {
       </section>
 
       {/* ── Final CTA ── */}
-      <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
+      <section className="py-20 lg:py-20" style={{ background: 'var(--color-surface)' }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2
-            className="font-display text-4xl lg:text-6xl font-semibold text-white mb-8"
+            className="font-display text-4xl lg:text-6xl font-semibold text-[#102A43] mb-8"
             style={{ lineHeight: 1.1 }}
           >
             Have a Market, Sales or
@@ -477,4 +566,3 @@ export default function Home() {
     </div>
   )
 }
-

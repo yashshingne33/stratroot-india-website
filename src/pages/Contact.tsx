@@ -137,7 +137,7 @@ export default function Contact() {
                     stratroot@gmail.com
                   </p>
                 </div>
-                <div>
+                {/* <div>
                   <div className="flex items-center gap-3 mb-2">
                     <Phone size={16} style={{ color: 'var(--color-accent)' }} />
                     <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-muted)' }}>
@@ -147,7 +147,7 @@ export default function Contact() {
                   <p className="text-base font-medium" style={{ color: 'var(--color-primary)' }}>
                     9730755721
                   </p>
-                </div>
+                </div> */}
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <MapPin size={16} style={{ color: 'var(--color-accent)' }} />
@@ -158,10 +158,10 @@ export default function Contact() {
                   <p className="text-sm leading-relaxed" style={{ color: 'var(--color-charcoal)' }}>
                     Nagpur, Maharashtra, India
                     <br />
-                    <span style={{ color: 'var(--color-muted)' }}>[Confirmed address pending]</span>
+                    {/* <span style={{ color: 'var(--color-muted)' }}>[Confirmed address pending]</span> */}
                   </p>
                 </div>
-                <div>
+                {/* <div>
                   <div className="flex items-center gap-3 mb-2">
                     <Share2 size={16} style={{ color: 'var(--color-accent)' }} />
                     <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-muted)' }}>
@@ -171,7 +171,7 @@ export default function Contact() {
                   <p className="text-base font-medium" style={{ color: 'var(--color-primary)' }}>
                     [Official LinkedIn page]
                   </p>
-                </div>
+                </div> */}
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <Clock size={16} style={{ color: 'var(--color-accent)' }} />
