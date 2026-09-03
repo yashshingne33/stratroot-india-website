@@ -120,16 +120,24 @@ export default function About() {
             </div>
 
             {/* Placeholder for authentic working photograph — swap once supplied */}
-            <div
-              className="rounded-lg border flex items-center justify-center h-[280px] sm:h-[360px] lg:h-[480px]"
-              style={{ borderColor: 'var(--color-border)', background: 'var(--color-sage, #A8B8A5)' }}
-            >
-              <p className="text-xs text-center px-8" style={{ color: 'var(--color-charcoal)' }}>
-                Authentic working / field-execution photograph
-                <br />
-                (to be added)
-              </p>
-            </div>
+            <div className="relative mx-auto w-full h-[280px] sm:h-[360px] lg:h-[480px]">
+  {/* offset frame — sits behind, peeking out bottom-left this time for variation */}
+  <div
+    className="absolute -bottom-4 -left-4 w-full h-full rounded-lg border"
+    style={{ borderColor: 'var(--color-gold)' }}
+  />
+
+  <div
+    className="relative rounded-lg border overflow-hidden shadow-lg h-full"
+    style={{ borderColor: 'var(--color-border)' }}
+  >
+    <img
+      src="/images/field-execution.jpg"
+      alt="StratRoot field execution work"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
           </div>
         </div>
       </section>
