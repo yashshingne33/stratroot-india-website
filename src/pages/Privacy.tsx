@@ -95,7 +95,7 @@ const SECTIONS = [
 export default function Privacy() {
   return (
     <div>
-      <div className="pt-36 pb-20 lg:pt-48 lg:pb-24" style={{ background: '#111827' }}>
+      <div className="pt-36 pb-20 lg:pt-48 lg:pb-24" style={{ background: '#102A43' }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h1
             className="font-display text-4xl lg:text-5xl font-semibold text-white"
