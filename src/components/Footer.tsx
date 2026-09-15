@@ -1,21 +1,21 @@
 import { Link } from 'react-router'
-import { Mail, Phone, MapPin } from 'lucide-react'
+import { Mail, MapPin, Clock } from 'lucide-react'
 
 const QUICK_LINKS = [
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
-  // { label: 'Industries', to: '/industries' },
-  // { label: 'Case Studies', to: '/case-studies' },
+  { label: 'Export Consulting', to: '/export-consulting' },
+  { label: 'Industries', to: '/industries' },
   { label: 'Insights', to: '/insights' },
   { label: 'Contact', to: '/contact' },
 ]
 
 const SERVICES = [
-  { label: 'Export Market Development', slug: 'export-market-development' },
-  { label: 'Export Sales & Channel Development', slug: 'export-sales-channel-development' },
-  { label: 'Business Strategy & Commercial Advisory', slug: 'business-strategy-advisory' },
-  { label: 'Operations & Execution Systems', slug: 'operations-execution-systems' },
-  { label: 'Market-Ready Business Communication', slug: 'market-ready-communication' },
+  { label: 'Export Consulting', to: '/export-consulting' },
+  { label: 'Sales and Channel Development', to: '/services/sales-channel-development' },
+  { label: 'Business Strategy and Commercial Advisory', to: '/services/business-strategy-advisory' },
+  { label: 'Operations and Execution Systems', to: '/services/operations-execution-systems' },
+  { label: 'Business Communication', to: '/services/market-ready-communication' },
 ]
 
 export default function Footer() {
@@ -32,8 +32,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed mb-4 max-w-sm" style={{ color: 'var(--color-muted)' }}>
-              Growth, market development and execution consulting for manufacturers, exporters,
-              FPOs and emerging businesses.
+              StratRoot India helps manufacturers, exporters, FPOs, processors, traders and
+              emerging businesses develop markets, strengthen sales and improve execution.
             </p>
             <p className="text-xs font-medium italic" style={{ color: 'var(--color-gold)' }}>
               Rooting for Your Success.
@@ -63,9 +63,9 @@ export default function Footer() {
             </p>
             <ul className="space-y-3">
               {SERVICES.map((s) => (
-                <li key={s.slug}>
+                <li key={s.to}>
                   <Link
-                    to={`/services/${s.slug}`}
+                    to={s.to}
                     className="text-sm transition-colors hover:text-white"
                     style={{ color: 'var(--color-muted)' }}
                   >
@@ -86,13 +86,13 @@ export default function Footer() {
                 <Mail size={14} className="mt-0.5 flex-shrink-0" />
                 <span className="break-words">stratroot@gmail.com</span>
               </li>
-              {/* <li className="flex items-start gap-2 text-sm min-w-0" style={{ color: 'var(--color-muted)' }}>
-                <Phone size={14} className="mt-0.5 flex-shrink-0" />
-                <span className="break-words">9730755721</span>
-              </li> */}
               <li className="flex items-start gap-2 text-sm min-w-0" style={{ color: 'var(--color-muted)' }}>
                 <MapPin size={14} className="mt-0.5 flex-shrink-0" />
                 <span className="break-words">Nagpur, Maharashtra, India</span>
+              </li>
+              <li className="flex items-start gap-2 text-sm min-w-0" style={{ color: 'var(--color-muted)' }}>
+                <Clock size={14} className="mt-0.5 flex-shrink-0" />
+                <span className="break-words">Mon–Sat, 10:00 AM–6:30 PM IST</span>
               </li>
             </ul>
           </div>
@@ -105,12 +105,12 @@ export default function Footer() {
         >
           <p>Copyright {new Date().getFullYear()} StratRoot India. All rights reserved.</p>
           <div className="flex items-center justify-center sm:justify-start gap-6 flex-wrap">
-            <Link to="/legal#privacy-policy" className="hover:text-white transition-colors">
+            <Link to="/privacy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/legal#terms-of-use" className="hover:text-white transition-colors">
-              Terms of Use
-            </Link>
+            {/* Terms of Use: no page built yet — brief flags this as pending Saurabh's review
+                of the legal entity/data-handling text before it can be published. Add the
+                Link back here once /terms-of-use exists. */}
           </div>
         </div>
       </div>
