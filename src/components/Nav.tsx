@@ -3,17 +3,16 @@ import { Link, useLocation } from 'react-router'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
 const services = [
-  { label: 'Export Market Development', slug: 'export-market-development' },
-  { label: 'Export Sales & Channel Development', slug: 'export-sales-channel-development' },
-  { label: 'Business Strategy & Commercial Advisory', slug: 'business-strategy-advisory' },
-  { label: 'Operations & Execution Systems', slug: 'operations-execution-systems' },
-  { label: 'Market-Ready Business Communication', slug: 'market-ready-communication' },
+  { label: 'Export Consulting', to: '/export-consulting' },
+  { label: 'Sales and Channel Development', to: '/services/sales-channel-development' },
+  { label: 'Business Strategy and Commercial Advisory', to: '/services/business-strategy-advisory' },
+  { label: 'Operations and Execution Systems', to: '/services/operations-execution-systems' },
+  { label: 'Market Ready Business Communication', to: '/services/market-ready-communication' },
 ]
 
 const navLinks = [
   { label: 'About', to: '/about' },
-  // { label: 'Industries', to: '/industries' },
-  // { label: 'Case Studies', to: '/case-studies' },
+  { label: 'Industries', to: '/industries' },
   { label: 'Insights', to: '/insights' },
   { label: 'Contact', to: '/contact' },
 ]
@@ -122,8 +121,8 @@ export default function Nav() {
                     <div className="space-y-0.5">
                       {services.map((s) => (
                         <Link
-                          key={s.slug}
-                          to={`/services/${s.slug}`}
+                          key={s.to}
+                          to={s.to}
                           className="block px-2 py-2 text-sm text-[var(--color-charcoal)] hover:bg-[var(--color-surface)] hover:text-[var(--color-primary)] rounded transition-colors"
                         >
                           {s.label}
@@ -143,12 +142,12 @@ export default function Nav() {
               )}
             </div>
 
-            {/* <NavItem to="/industries" active={pathname === '/industries'}>
+            <NavItem to="/export-consulting" active={pathname === '/export-consulting'}>
+              Export Consulting
+            </NavItem>
+            <NavItem to="/industries" active={pathname === '/industries'}>
               Industries
-            </NavItem> */}
-            {/* <NavItem to="/case-studies" active={pathname === '/case-studies'}>
-              Case Studies
-            </NavItem> */}
+            </NavItem>
             <NavItem to="/insights" active={pathname === '/insights'}>
               Insights
             </NavItem>
@@ -160,11 +159,11 @@ export default function Nav() {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              to="/consultation"
+              to="/contact"
               className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-white rounded transition-transform duration-200 hover:-translate-y-0.5"
               style={{ background: 'var(--color-accent)' }}
             >
-              Book Consultation
+              Discuss Your Requirement
             </Link>
           </div>
 
@@ -186,6 +185,7 @@ export default function Nav() {
             {[
               { label: 'About', to: '/about' },
               { label: 'Services', to: '/services' },
+              { label: 'Export Consulting', to: '/export-consulting' },
               ...navLinks.filter((l) => l.label !== 'About'),
             ].map((item) => {
               const active = pathname === item.to
@@ -209,11 +209,11 @@ export default function Nav() {
           </div>
           <div className="mt-6">
             <Link
-              to="/consultation"
+              to="/contact"
               className="block w-full text-center px-5 py-3 text-sm font-medium text-white rounded"
               style={{ background: 'var(--color-accent)' }}
             >
-              Book Consultation
+              Discuss Your Requirement
             </Link>
           </div>
         </div>

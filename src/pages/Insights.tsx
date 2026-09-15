@@ -96,7 +96,66 @@ export default function Insights() {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32" style={{ background: '#F8FAF7' }}>
+{/* 
+      <section className="pt-36 pb-20 lg:pt-48 lg:pb-24 relative overflow-hidden" style={{ background: 'var(--color-primary)' }}>
+  <div 
+    className="absolute inset-0 bg-cover bg-center"
+    // style={{ backgroundImage: 'url(/images/global-market.jpg)' }}
+    style={{ backgroundImage: 'https://unsplash.com/photos/modern-city-skyline-illuminated-at-night-D4Fusz_VEHM' }}
+    
+  />
+  <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <div className="flex items-center gap-3 mb-8">
+      <span className="h-px w-12" style={{ background: 'var(--color-gold)' }} />
+      <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-gold)' }}>
+        Insights
+      </span>
+    </div>
+    <h1
+      className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
+      style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
+    >
+      Thinking that
+      <br />
+      <em style={{ color: 'var(--color-gold)', fontStyle: 'normal' }}>cuts through.</em>
+    </h1>
+    <p className="text-lg max-w-lg" style={{ color: 'var(--color-muted)' }}>
+      Grounded analysis on Indian business — written by people who spend their time inside businesses, not writing about them from the outside.
+    </p>
+  </div>
+</section> */}
+
+{/* <section className="pt-36 pb-20 lg:pt-48 lg:pb-24 relative overflow-hidden" style={{ background: 'var(--color-primary)' }}>
+  <div 
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2000&auto=format&fit=crop)' }}
+  />
+  <div 
+    className="absolute inset-0"
+    style={{ background: 'linear-gradient(180deg, rgba(11,20,38,0.75) 0%, rgba(11,20,38,0.55) 100%)' }}
+  />
+  <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <div className="flex items-center gap-3 mb-8">
+      <span className="h-px w-12" style={{ background: 'var(--color-gold)' }} />
+      <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'var(--color-gold)' }}>
+        Insights
+      </span>
+    </div>
+    <h1
+      className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
+      style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
+    >
+      Thinking that
+      <br />
+      <em style={{ color: 'var(--color-gold)', fontStyle: 'normal' }}>cuts through.</em>
+    </h1>
+    <p className="text-lg max-w-lg" style={{ color: 'var(--color-muted)' }}>
+      Grounded analysis on Indian business — written by people who spend their time inside businesses, not writing about them from the outside.
+    </p>
+  </div>
+</section> */}
+
+      <section className="py-20 lg:py-20" style={{ background: '#F8FAF7' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Category Filter Pills */}
           <div className="flex flex-wrap items-center gap-2 mb-12">

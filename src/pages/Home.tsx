@@ -142,7 +142,7 @@ export default function Home() {
   {/* Earth image */}
   <div className="absolute inset-0 z-0">
     <img
-      // src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1800&auto=format&fit=crop"
+      src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1800&auto=format&fit=crop"
       // src="/images/world.jpg"
       // src="/images/global-market.jpg"
       // src="/images/india-home.jpg"
