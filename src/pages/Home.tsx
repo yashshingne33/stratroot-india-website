@@ -885,7 +885,7 @@ export default function Home() {
       <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
-            <div className="max-w-xl">
+            <div className="max-w-3xl">
               <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
                 What We Do
               </p>
@@ -934,7 +934,7 @@ export default function Home() {
       {/* ── How StratRoot Works ── */}
       <section className="py-20 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-xl mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: 'var(--color-gold)' }}>
               Our Working Method
             </p>
