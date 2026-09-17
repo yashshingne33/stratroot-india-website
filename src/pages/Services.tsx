@@ -418,9 +418,10 @@ export default function Services() {
             style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
           >
             Consulting Designed to Improve{' '}
-            <em style={{ color: '#2F855A', fontStyle: 'normal' }}>
+            {/* <em style={{ color: '#2F855A', fontStyle: 'normal' }}>
               Commercial Decisions and Execution.
-            </em>
+            </em> */}
+            Commercial Decisions and <span style={{ color: 'var(--color-accent)' }}>Execution.</span>
           </h1>
           <p className="text-lg max-w-lg" style={{ color: 'var(--color-muted)' }}>
             StratRoot supports businesses at the points where market opportunity, commercial

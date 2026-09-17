@@ -384,7 +384,8 @@ export default function About() {
           >
             A Consulting Partner for
             <br />
-            <em style={{ color: '#2F855A', fontStyle: 'normal' }}>Growth That Must Be Executed.</em>
+            {/* <em style={{ color: '#2F855A', fontStyle: 'normal' }}>Growth That Must Be Executed.</em> */}
+            Growth That Must Be <span style={{ color: 'var(--color-accent)' }}>Executed.</span>
           </h1>
           <p className="text-lg max-w-lg" style={{ color: 'var(--color-muted)' }}>
             StratRoot India is a growth and execution consulting firm. We work with founders,
