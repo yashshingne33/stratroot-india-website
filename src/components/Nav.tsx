@@ -159,7 +159,7 @@ export default function Nav() {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              to="/contact"
+              to="/consultation"
               className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-white rounded transition-transform duration-200 hover:-translate-y-0.5"
               style={{ background: 'var(--color-accent)' }}
             >
@@ -209,7 +209,7 @@ export default function Nav() {
           </div>
           <div className="mt-6">
             <Link
-              to="/contact"
+              to="/consultation"
               className="block w-full text-center px-5 py-3 text-sm font-medium text-white rounded"
               style={{ background: 'var(--color-accent)' }}
             >
