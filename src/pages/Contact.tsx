@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
-import emailjs from '@emailjs/browser'
 import { MapPin, Mail, Clock, Send, AlertCircle, Search, MessageCircleQuestion, Handshake } from 'lucide-react'
 
 // ── Page metadata (from content brief: Contact page → Page setup) ──
@@ -8,6 +7,10 @@ const PAGE_TITLE = 'Contact StratRoot India | Discuss Your Business Requirement'
 const PAGE_DESCRIPTION =
   'Contact StratRoot India to discuss export consulting, sales development, business strategy, operations or commercial communication requirements.'
 const CANONICAL_URL = 'https://stratroot.com/contact'
+
+// Google Apps Script Web App URL (see Code.gs). Set this in your .env as
+// VITE_CONTACT_FORM_ENDPOINT=https://script.google.com/macros/s/XXXXXXXX/exec
+const CONTACT_FORM_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT
 
 const INDUSTRIES = [
   'Agriculture, Food Processing and FPOs',
@@ -104,12 +107,22 @@ export default function Contact() {
     setError(false)
 
     try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          full_name: form.fullName,
-          company_name: form.companyName,
+      // Apps Script Web Apps don't send CORS headers on their response,
+      // so even though the request reaches the script and the emails go
+      // out, the browser blocks us from reading the response body back
+      // (response.json() throws a CORS/network error here even on a
+      // successful send). mode: 'no-cors' avoids that: the request still
+      // goes through, we just can't inspect what came back, so a resolved
+      // fetch (no thrown network error) is treated as success. Content-Type
+      // stays text/plain so this also avoids a CORS preflight the endpoint
+      // can't answer.
+      await fetch(CONTACT_FORM_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({
+          fullName: form.fullName,
+          companyName: form.companyName,
           designation: form.designation,
           email: form.email,
           phone: form.phone,
@@ -118,22 +131,15 @@ export default function Contact() {
           service: form.service,
           market: form.market,
           description: form.description,
-          // For follow-up reporting: source, date and service requested.
-          source: 'Website contact form',
-          submitted_at: new Date().toISOString(),
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-
-      // WhatsApp auto-send intentionally not implemented — per the content
-      // brief's developer note, this should only be added once management
-      // confirms the exact business number and assigns responsibility for
-      // monitoring it.
+          company_hp: form.company_hp,
+        }),
+      })
 
       setSubmitted(true)
-    } catch (err: any) {
-      console.error('EmailJS error status:', err?.status)
-      console.error('EmailJS error text:', err?.text)
+    } catch (err) {
+      // This only fires on an actual network failure (offline, DNS,
+      // endpoint unreachable) — not on anything the script itself does.
+      console.error('Contact form submission error:', err)
       setError(true)
     } finally {
       setSending(false)
@@ -188,12 +194,6 @@ export default function Contact() {
                     connect@stratroot.com
                   </a>
                 </div>
-                {/*
-                  DEVELOPER NOTE (per content brief): add a WhatsApp
-                  button only after management confirms the exact
-                  business number and assigns responsibility for
-                  monitoring it.
-                */}
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <MapPin size={16} style={{ color: 'var(--color-accent)' }} />
