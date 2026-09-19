@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router'
 import { ArrowRight, Wheat, Factory, Ship, ShoppingBag, HardHat, FlaskConical } from 'lucide-react'
+import Seo from '../components/Seo'
+import { SEO } from '../seo'
 
 // ── Page metadata (from content brief: Industries page → Page setup) ──
 const PAGE_TITLE = 'Industries We Serve | StratRoot India'
@@ -144,6 +146,8 @@ export default function Industries() {
 
   return (
     <div>
+
+      <Seo {...SEO.industries} />
       {/* ── Hero ── */}
       <section className="pt-36 pb-20 lg:pt-48 lg:pb-24" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -153,12 +157,6 @@ export default function Industries() {
               Industries
             </span>
           </div>
-          {/* <h1
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-3xl mb-6"
-            style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-          >
-            Commercial Strategy Must Fit the Industry.
-          </h1> */}
 
           <h1
             className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-4xl mb-6"

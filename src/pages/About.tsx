@@ -275,6 +275,8 @@ import {
   Quote,
   Milestone,
 } from 'lucide-react'
+import Seo from '../components/Seo'
+import { SEO } from '../seo'
 
 // ── Page metadata (from content brief: About page → Page setup) ──
 // If the app already sets meta tags globally (react-helmet-async, a
@@ -369,6 +371,8 @@ export default function About() {
 
   return (
     <div>
+      <Seo {...SEO.about} />
+      
       {/* ── Hero ── */}
       <section className="pt-36 pb-20 lg:pt-48 lg:pb-24" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { CheckCircle, CalendarDays, ArrowRight, Loader2, AlertCircle } from 'lucide-react'
+import Seo from '../components/Seo'
+import { SEO } from '../seo'
 
 const TIME_SLOTS = ['10:00 AM', '11:00 AM', '12:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM']
 
@@ -56,6 +58,8 @@ export default function Consultation() {
 
   return (
     <div>
+      <Seo {...SEO.consultation} />
+
       {/* ── Header ── */}
       <section className="pt-36 pb-20 lg:pt-48 lg:pb-24" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

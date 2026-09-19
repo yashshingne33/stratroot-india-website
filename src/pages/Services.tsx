@@ -261,6 +261,8 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router'
 import { Globe, Users, BarChart3, Settings, MessageSquare, ArrowRight, Search, ClipboardList, Repeat, Layers } from 'lucide-react'
+import Seo from '../components/Seo'
+import { SEO } from '../seo'
 
 // ── Page metadata (from content brief: Services page → Page setup) ──
 const PAGE_TITLE = 'Business Consulting Services | StratRoot India'
@@ -403,6 +405,7 @@ export default function Services() {
 
   return (
     <div>
+      <Seo {...SEO.services} />
 
       {/* ── Header ── */}
       <section className="pt-36 pb-20 lg:pt-48 lg:pb-24" style={{ background: 'var(--color-primary)' }}>

@@ -123,6 +123,7 @@ const WHY_STRATROOT = [
 export default function Home() {
   return (
     <div>
+      <Seo {...SEO.home} />
 
     {/* ── Hero Section ── */}
       <section

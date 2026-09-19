@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import { MapPin, Mail, Clock, Send, AlertCircle, Search, MessageCircleQuestion, Handshake } from 'lucide-react'
+import Seo from '../components/Seo'
+import { SEO } from '../seo'
 
 // ── Page metadata (from content brief: Contact page → Page setup) ──
 const PAGE_TITLE = 'Contact StratRoot India | Discuss Your Business Requirement'
@@ -148,6 +150,8 @@ export default function Contact() {
 
   return (
     <div>
+      <Seo {...SEO.contact} />
+
       {/* ── Hero ── */}
       <section className="pt-36 pb-20 lg:pt-48 lg:pb-24" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

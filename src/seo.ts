@@ -37,13 +37,20 @@ export const SEO = {
       'Contact StratRoot India to discuss export consulting, sales development, business strategy, operations or commercial communication requirements.',
     path: '/contact',
   },
+  consultation: {
+    title: 'Consultation | StratRoot India',
+    description:
+      'Schedule a consultation with StratRoot India to discuss your export consulting, sales development, business strategy, operations or commercial communication requirements.',
+    path: '/consultation',
+  },
 
-  // Not in the audit document. Written by us, so change freely.
+  // Privacy path comes from the Remaining Changes doc (canonical /privacy).
+  // Its title and description are not in either document. Written by us, so change freely.
   privacy: {
     title: 'Privacy Policy | StratRoot India',
     description:
       'How StratRoot India collects, uses and protects the information you share through this website.',
-    path: '/privacy-policy',
+    path: '/privacy',
   },
   notFound: {
     title: 'Page Not Found | StratRoot India',

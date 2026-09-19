@@ -1,5 +1,7 @@
 import { Link } from 'react-router'
 import { ArrowRight } from 'lucide-react'
+import Seo from '../components/Seo'
+import { SEO } from '../seo'
 
 export default function NotFound() {
   return (
@@ -7,6 +9,7 @@ export default function NotFound() {
       className="min-h-screen flex flex-col items-center justify-center px-6 text-center"
       style={{ background: '#111827' }}
     >
+       <Seo {...SEO.notFound} />
       <p
         className="font-display text-9xl font-semibold mb-4"
         style={{ color: '#1F2937', fontSize: '180px', lineHeight: 1 }}
