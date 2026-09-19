@@ -4,6 +4,9 @@ import {
   BarChart3, Settings, MessageSquare, Search, Activity,
   ClipboardList, RefreshCw, Quote, TrendingUp,
 } from 'lucide-react'
+import Seo from '../components/Seo'
+import { SEO } from '../seo'
+
 
 const CAPABILITY_INDICATORS = [
   { icon: Target, title: 'Market Strategy', body: 'Clear choices on products, customers and geographies' },
