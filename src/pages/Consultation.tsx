@@ -65,13 +65,14 @@ export default function Consultation() {
               Start a Conversation
             </span>
           </div>
+
           <h1
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
+            className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-4xl mb-6"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
-            A Structured
+          A Structured
             <br />
-            <em style={{ color: 'var(--color-gold)', fontStyle: 'normal' }}>First Conversation.</em>
+            <em style={{ color: '#2F855A', fontStyle: 'normal' }}>First Conversation.</em>
           </h1>
           <p className="text-lg max-w-lg" style={{ color: 'var(--color-muted)' }}>
             Let us examine the opportunity, understand the constraints and define the most

@@ -224,12 +224,6 @@ export default function ExportConsulting() {
               Export Consulting
             </span>
           </div>
-          {/* <h1
-            className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-4xl mb-6"
-            style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-          >
-            Build a Practical Route from Export Readiness to Buyer Development.
-          </h1> */}
           <h1
             className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-4xl mb-6"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}

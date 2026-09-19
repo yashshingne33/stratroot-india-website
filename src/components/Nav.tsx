@@ -4,16 +4,18 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 
 const services = [
   { label: 'Export Consulting', to: '/export-consulting' },
-  { label: 'Sales and Channel Development', to: '/services/sales-channel-development' },
-  { label: 'Business Strategy and Commercial Advisory', to: '/services/business-strategy-advisory' },
-  { label: 'Operations and Execution Systems', to: '/services/operations-execution-systems' },
-  { label: 'Market Ready Business Communication', to: '/services/market-ready-communication' },
+  { label: 'Sales Development', to: '/services/sales-channel-development' },
+  { label: 'Commercial Advisory', to: '/services/business-strategy-advisory' },
+  { label: 'Execution Systems', to: '/services/operations-execution-systems' },
+  { label: 'Business Communication', to: '/services/market-ready-communication' },
 ]
 
-const navLinks = [
+const mobileLinks = [
+  { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
+  { label: 'Services', to: '/services' },
+  { label: 'Export Consulting', to: '/export-consulting' },
   { label: 'Industries', to: '/industries' },
-  // { label: 'Insights', to: '/insights' },
   { label: 'Contact', to: '/contact' },
 ]
 
@@ -46,7 +48,7 @@ export default function Nav() {
   // Shared link with animated underline that's always-on for the active page,
   // and grows in from the center on hover for inactive links.
   const NavItem = ({ to, children, active }: { to: string; children: React.ReactNode; active: boolean }) => (
-    <Link to={to} className="relative group py-2">
+    <Link to={to} className="relative group py-2" aria-current={active ? 'page' : undefined}>
       <span className={`text-sm font-medium transition-colors group-hover:text-[var(--color-accent)] ${textColor}`}>
         {children}
       </span>
@@ -87,19 +89,34 @@ export default function Nav() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-9">
+          {/* Desktop Nav: Home | About | Services | Export Consulting | Industries | Contact.
+              Insights is intentionally left out until its content is ready: add it back between
+              Industries and Contact here, and in mobileLinks above. */}
+          <nav aria-label="Main" className="hidden lg:flex items-center gap-6 xl:gap-9">
+            <NavItem to="/" active={pathname === '/'}>
+              Home
+            </NavItem>
             <NavItem to="/about" active={pathname === '/about'}>
               About
             </NavItem>
 
-            {/* Services dropdown */}
+            {/* Services dropdown: opens on hover, click/Enter, and keyboard focus; closes on Escape or when focus leaves */}
             <div
               className="relative"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
+              onKeyDown={(e) => {
+                if (e.key === 'Escape') setServicesOpen(false)
+              }}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setServicesOpen(false)
+              }}
             >
               <button
+                type="button"
+                aria-expanded={servicesOpen}
+                aria-controls="services-menu"
+                onClick={() => setServicesOpen(true)}
                 className={`relative group flex items-center gap-1 py-2 text-sm font-medium transition-colors group-hover:text-[var(--color-accent)] ${textColor}`}
               >
                 Services
@@ -113,7 +130,7 @@ export default function Nav() {
                 />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+                <div id="services-menu" className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
                   <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg shadow-xl p-4 w-80">
                     <p className="text-[10px] font-semibold tracking-widest uppercase text-[var(--color-accent)] mb-3 px-2">
                       What We Do
@@ -148,9 +165,6 @@ export default function Nav() {
             <NavItem to="/industries" active={pathname === '/industries'}>
               Industries
             </NavItem>
-            {/* <NavItem to="/insights" active={pathname === '/insights'}>
-              Insights
-            </NavItem> */}
             <NavItem to="/contact" active={pathname === '/contact'}>
               Contact
             </NavItem>
@@ -169,9 +183,12 @@ export default function Nav() {
 
           {/* Mobile toggle */}
           <button
+            type="button"
             onClick={() => setOpen(!open)}
             className={`lg:hidden p-2 ${textColor}`}
             aria-label="Toggle menu"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -180,19 +197,15 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-[var(--color-surface)] border-t border-[var(--color-border)] px-6 py-6">
-          <div className="space-y-1">
-            {[
-              { label: 'About', to: '/about' },
-              { label: 'Services', to: '/services' },
-              { label: 'Export Consulting', to: '/export-consulting' },
-              ...navLinks.filter((l) => l.label !== 'About'),
-            ].map((item) => {
-              const active = pathname === item.to
+        <div id="mobile-menu" className="lg:hidden bg-[var(--color-surface)] border-t border-[var(--color-border)] px-6 py-6">
+          <nav aria-label="Mobile" className="space-y-1">
+            {mobileLinks.map((item) => {
+              const active = item.to === '/services' ? isServicesActive : pathname === item.to
               return (
                 <Link
                   key={item.to}
                   to={item.to}
+                  aria-current={active ? 'page' : undefined}
                   className="flex items-center justify-between py-3 text-base font-medium border-b transition-colors"
                   style={{
                     color: active ? 'var(--color-accent)' : 'var(--color-primary)',
@@ -206,7 +219,7 @@ export default function Nav() {
                 </Link>
               )
             })}
-          </div>
+          </nav>
           <div className="mt-6">
             <Link
               to="/consultation"

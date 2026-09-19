@@ -153,12 +153,22 @@ export default function Industries() {
               Industries
             </span>
           </div>
-          <h1
+          {/* <h1
             className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-3xl mb-6"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
             Commercial Strategy Must Fit the Industry.
+          </h1> */}
+
+          <h1
+            className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-4xl mb-6"
+            style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
+          >
+          Commercial Strategy
+            <br />
+            <em style={{ color: '#2F855A', fontStyle: 'normal' }}>Must Fit the Industry.</em>
           </h1>
+
           <p className="text-lg max-w-xl" style={{ color: 'var(--color-muted)' }}>
             Products move through different buyers, channels, approval systems and operating
             constraints. StratRoot adapts the assignment to the sector, product economics, buying

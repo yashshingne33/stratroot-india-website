@@ -157,14 +157,16 @@ export default function Contact() {
               Contact StratRoot
             </span>
           </div>
+
           <h1
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white max-w-2xl mb-6"
+            className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-4xl mb-6"
             style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
           >
-            Tell Us What You Are
+          Tell Us What You Are
             <br />
-            <em style={{ color: 'var(--color-gold)', fontStyle: 'normal' }}>Trying to Achieve.</em>
+            <em style={{ color: '#2F855A', fontStyle: 'normal' }}>Trying to Achieve.</em>
           </h1>
+
           <p className="text-lg max-w-lg" style={{ color: 'var(--color-muted)' }}>
             Share your business objective, present position and the issue slowing progress. We
             will review the requirement and respond with the most appropriate next step.
@@ -187,11 +189,11 @@ export default function Contact() {
                     </p>
                   </div>
                   <a
-                    href="mailto:connect@stratroot.com"
+                    href="mailto:stratroot@gmail.com"
                     className="text-base font-medium hover:underline"
                     style={{ color: 'var(--color-primary)' }}
                   >
-                    connect@stratroot.com
+                    stratroot@gmail.com
                   </a>
                 </div>
                 <div>
@@ -456,8 +458,8 @@ export default function Contact() {
                         <p className="text-xs leading-relaxed" style={{ color: '#B91C1C' }}>
                           Please check the required fields and try again. If the problem
                           continues, email{' '}
-                          <a href="mailto:connect@stratroot.com" className="underline">
-                            connect@stratroot.com
+                          <a href="mailto:stratroot@gmail.com" className="underline">
+                            stratroot@gmail.com
                           </a>
                           .
                         </p>
