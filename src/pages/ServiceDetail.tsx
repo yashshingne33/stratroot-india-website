@@ -146,7 +146,7 @@ export default function ServiceDetail() {
           </Link>
           <div className="max-w-3xl">
             <h1
-              className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white"
+              className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white"
               style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
             >
               {data.title}

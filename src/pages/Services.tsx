@@ -34,7 +34,6 @@ const SERVICES = [
     icon: Users,
     label: 'Sales and Channel Development',
     slug: 'sales-channel-development',
-    href: '/sales-channel-development',
     linkLabel: 'Explore Sales and Channel Development',
     promise:
       'Build a more organised route to customers across direct sales, distributors, institutions, retailers and strategic partners.',
@@ -54,6 +53,7 @@ const SERVICES = [
     icon: BarChart3,
     label: 'Business Strategy and Commercial Advisory',
     slug: 'business-strategy-advisory',
+    linkLabel: 'Explore Business Strategy Advisory',
     promise:
       'Give management a clearer basis for evaluating opportunities, choosing priorities and committing resources.',
     typicalWork: [
@@ -72,6 +72,7 @@ const SERVICES = [
     icon: Settings,
     label: 'Operations and Execution Systems',
     slug: 'operations-execution-systems',
+    linkLabel: 'Explore Operations and Execution Systems',
     promise: 'Improve management visibility, accountability and control over the work that drives performance.',
     typicalWork: [
       'Process and workflow mapping',
@@ -89,6 +90,7 @@ const SERVICES = [
     icon: MessageSquare,
     label: 'Market-Ready Business Communication',
     slug: 'market-ready-communication',
+    linkLabel: 'Explore Market-Ready Communication',
     promise:
       'Present the business, product and commercial offer with the clarity expected by serious buyers, partners and decision-makers.',
     typicalWork: [
@@ -228,7 +230,7 @@ export default function Services() {
                         className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium border rounded transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
                         style={{ borderColor: 'var(--color-border)', color: 'var(--color-charcoal)' }}
                       >
-                        {s.linkLabel ?? 'Learn more'} <ArrowRight size={14} />
+                        {s.linkLabel} <ArrowRight size={14} />
                       </Link>
                     </div>
                   </div>
