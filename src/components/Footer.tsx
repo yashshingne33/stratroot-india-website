@@ -50,7 +50,16 @@ export default function Footer() {
             <ul className="space-y-3">
               {QUICK_LINKS.map((item) => (
                 <li key={item.to}>
-                  <Link to={item.to} className="text-sm transition-colors hover:text-white" style={{ color: 'var(--color-muted)' }}>
+                  <Link
+                    to={item.to}
+                    onClick={() => {
+                      if (item.to === '/') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                      }
+                    }}
+                    className="text-sm transition-colors hover:text-white"
+                    style={{ color: 'var(--color-muted)' }}
+                  >
                     {item.label}
                   </Link>
                 </li>
