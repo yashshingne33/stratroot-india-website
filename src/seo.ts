@@ -46,6 +46,11 @@ export const SEO = {
       'How StratRoot India collects, uses and protects the information you share through this website.',
     path: '/privacy',
   },
+  terms: {
+    title: 'Terms of Use | StratRoot India',
+    description: 'Terms governing the use of the StratRoot India website, including enquiries, acceptable use, intellectual property and limitations.',
+    canonical: 'https://stratroot.com/terms-of-use',
+  },
   consultation: {
     title: 'Discuss Your Requirement | StratRoot India',
     description:

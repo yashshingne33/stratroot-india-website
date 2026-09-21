@@ -375,6 +375,8 @@ export default function Footer() {
             <Link to="/privacy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
+
+            <Link to="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
             {/* Terms of Use: no page built yet. Add
                 <Link to="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
                 here once the page exists and Saurabh has approved the text. */}
