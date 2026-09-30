@@ -496,11 +496,14 @@ export default function Home() {
       {/* ── Founder's Note ── */}
       <section className="py-20 lg:py-20" style={{ background: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 
             {/* ── Left: identity ── */}
             <div className="lg:col-span-4">
-              <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-6 flex items-center gap-2" style={{ color: 'var(--color-gold)' }}>
+              <p
+                className="text-xs font-semibold tracking-[0.2em] uppercase mb-6 flex items-center justify-center lg:justify-start gap-2"
+                style={{ color: 'var(--color-gold)' }}
+              >
                 <span className="w-5 h-px" style={{ background: 'var(--color-gold)' }} />
                 A Message from the Founder
               </p>
@@ -510,7 +513,7 @@ export default function Home() {
                   monogram on the live site; replace with the real photo
                   (see developer instruction in the About page brief). */}
               <div
-                className="relative rounded-xl border aspect-[4/5] flex items-center justify-center mb-6 overflow-hidden shadow-sm mx-auto max-w-[220px] sm:max-w-[260px] lg:max-w-none lg:mx-0"
+                className="relative rounded-xl border aspect-[4/5] flex items-center justify-center mb-6 overflow-hidden shadow-sm mx-auto max-w-[220px] sm:max-w-[260px] lg:max-w-none"
                 style={{ borderColor: 'var(--color-border)', background: 'var(--color-primary)' }}
               >
                 {/* subtle radial glow */}
@@ -537,26 +540,34 @@ export default function Home() {
                 </span>
               </div>
 
-              <p className="font-semibold text-base tracking-tight" style={{ color: 'var(--color-charcoal)' }}>
-                Saurabh Chalse
-              </p>
-              <p className="text-xs mt-1 font-medium" style={{ color: 'var(--color-muted)' }}>
-                Saurabh Chalse, Founder and Principal Consultant, StratRoot India
-              </p>
+              <div className="text-center lg:text-left">
+                <p className="font-semibold text-lg tracking-tight" style={{ color: '#2F855A' }}>
+                  Saurabh Chalse
+                </p>
+                <p className="text-sm mt-1 font-medium" style={{ color: 'var(--color-muted)' }}>
+                  Founder and Principal Consultant, StratRoot India
+                </p>
+              </div>
             </div>
 
             {/* ── Right: the note ── */}
-            <div className="lg:col-span-8 lg:pt-2 flex flex-col justify-between h-full">
-              <div>
+            <div className="lg:col-span-8">
+              <span
+                className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-7 shadow-sm"
+                style={{ background: 'var(--color-accent)' }}
+              >
+                <Quote size={20} className="text-white fill-white/20" strokeWidth={2.25} />
+              </span>
+
+              <div className="flex gap-5 lg:gap-6">
+                {/* gold accent bar */}
                 <span
-                  className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-7 shadow-sm"
-                  style={{ background: 'var(--color-accent)' }}
-                >
-                  <Quote size={20} className="text-white fill-white/20" strokeWidth={2.25} />
-                </span>
+                  className="hidden sm:block w-px shrink-0 rounded-full"
+                  style={{ background: 'var(--color-gold)', opacity: 0.6 }}
+                />
 
                 <blockquote
-                  className="font-serif italic text-2xl lg:text-[1.85rem] leading-[1.6] tracking-tight mb-10 font-normal"
+                  className="font-serif italic text-2xl lg:text-[1.85rem] leading-[1.6] tracking-tight font-normal"
                   style={{ color: '#e0dfe8' }}
                 >
                   "Business owners usually do not need another long report. They need a clear
@@ -564,15 +575,6 @@ export default function Home() {
                   practical route to action. StratRoot was created to provide that combination of
                   commercial thinking and execution support."
                 </blockquote>
-              </div>
-
-              <div className="pt-6 border-t flex flex-col sm:flex-row sm:items-end justify-between gap-4" style={{ borderColor: 'var(--color-border)' }}>
-                <div className="flex items-center gap-3">
-                  <span className="w-8 h-px" style={{ background: 'var(--color-gold)' }} />
-                  <p className="text-xs italic font-medium" style={{ color: 'var(--color-muted)' }}>
-                    Written personally by Saurabh Chalse
-                  </p>
-                </div>
               </div>
             </div>
 
