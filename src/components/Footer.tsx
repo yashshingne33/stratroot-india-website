@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import { Mail, MapPin, Clock } from 'lucide-react'
 
-const CONTACT_EMAIL = 'stratroot@gmail.com'
+const CONTACT_EMAIL = 'info@stratroot.com'
 
 const QUICK_LINKS = [
   {label: 'Home', to: '/' },

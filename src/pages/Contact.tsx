@@ -193,11 +193,11 @@ export default function Contact() {
                     </p>
                   </div>
                   <a
-                    href="mailto:stratroot@gmail.com"
+                    href="mailto:gmail.com"
                     className="text-base font-medium hover:underline"
                     style={{ color: 'var(--color-primary)' }}
                   >
-                    stratroot@gmail.com
+                    info@stratroot.com
                   </a>
                 </div>
                 <div>
@@ -462,8 +462,8 @@ export default function Contact() {
                         <p className="text-xs leading-relaxed" style={{ color: '#B91C1C' }}>
                           Please check the required fields and try again. If the problem
                           continues, email{' '}
-                          <a href="mailto:stratroot@gmail.com" className="underline">
-                            stratroot@gmail.com
+                          <a href="mailto:info@stratroot.com" className="underline">
+                            info@stratroot.com
                           </a>
                           .
                         </p>

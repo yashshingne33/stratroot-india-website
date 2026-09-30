@@ -8,7 +8,7 @@ export const LEGAL_NAME = 'StratRoot India'
 export const LOCATION = 'Nagpur, Maharashtra, India'
 
 // TODO: switch to privacy@stratroot.com (or connect@stratroot.com) only after the mailbox is created and tested.
-export const CONTACT_EMAIL = 'stratroot@gmail.com'
+export const CONTACT_EMAIL = 'info@stratroot.com'
 
 // TODO: set to the real publication date after legal review, and bump POLICY_VERSION on every change.
 // POLICY_VERSION should be the value stored with each form submission as the consent record.
