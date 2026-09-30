@@ -541,7 +541,7 @@ export default function Home() {
               </div>
 
               <div className="text-center lg:text-left">
-                <p className="font-semibold text-lg tracking-tight" style={{ color: '#2F855A' }}>
+                <p className="font-semibold text-lg tracking-tight" style={{ color: 'var(--color-muted)' }}>
                   Saurabh Chalse
                 </p>
                 <p className="text-sm mt-1 font-medium" style={{ color: 'var(--color-muted)' }}>
